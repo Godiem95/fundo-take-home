@@ -3,7 +3,7 @@
 Audit of Fundo's customer experience against the Apply Now brand reference, a redesign of the moment before the SSN screen, a validation plan, and a design system with the tooling to keep it alive.
 
 **Read it as a page:** [Claude artifact](https://claude.ai/artifact/B8UgnRFjZN1XPGGC5Jhzij) (preferred) or open `index.html` from this repository.
-**Editable screens:** Claude Design project (link in the artifact summary).
+**Editable screens:** [Claude Design project](https://claude.ai/artifact/ThRQYrexnkorhpjuMiRFbd) (the eight frames from Part 2, editable).
 
 ## Two-minute summary
 
@@ -21,7 +21,10 @@ Audit of Fundo's customer experience against the Apply Now brand reference, a re
 |---|---|
 | `index.html` | The full submission as a standalone page (same content as the artifact). Claude-readable: every claim is text, every image has a caption. |
 | `tokens.json` | Working token file in the W3C Design Tokens format, values extracted from the live Apply Now first screen and the prototype. |
+| `copy.json` | Final copy for the Part 2 screens, one key per string, so engineering and the brand check read the same source. |
 | `skills/fundo-brand-check/SKILL.md` | A Claude skill that reviews customer-facing work against the tokens, voice rules and financial-content patterns. |
+| `scripts/drift.sh` | CI check: flags hex colours, font families and radii in a folder that are not in `tokens.json`. Usage: `scripts/drift.sh <dir>`. |
+| `img/` | Evidence screenshots used in Part 1 (fundo.com, the prototype, Trustpilot). |
 | `screens/` | PNG renders (2x) of the before/after and edge-case frames from Part 2, 360 px wide. The frames in `index.html` are real HTML; these are for quick viewing. |
 
 ## Screens

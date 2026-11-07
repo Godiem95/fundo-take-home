@@ -12,7 +12,7 @@
 :root[data-theme="dark"]{--bg:#0f1115;--surface:#171a21;--ink:#f3f4f6;--ink-2:#c7cdd6;--ink-3:#9aa3b2;--line:#2a2f3a;--card:#171a21;--brand-deep:#8ab8ff}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:Roboto,system-ui,sans-serif;font-size:16px;line-height:1.55}
-.wrap{max-width:1040px;margin:0 auto;padding:24px 16px 80px}
+.wrap{max-width:1200px;margin:0 auto;padding:24px 16px 80px}
 h1,h2,h3,h4{font-family:Outfit,system-ui,sans-serif;line-height:1.15;margin:0 0 .4em}
 h1{font-size:clamp(28px,5vw,44px);font-weight:700}
 h2{font-size:clamp(22px,3.4vw,30px);font-weight:700;margin-top:2.2em;padding-top:1.2em;border-top:1px solid var(--line)}
@@ -21,16 +21,17 @@ h4{font-size:16px;font-weight:700;margin-top:1.4em}
 p{margin:0 0 1em;max-width:72ch}
 a{color:var(--brand)}
 small,.muted{color:var(--ink-3)}
-.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);font-weight:700;font-family:Outfit}
+.eyebrow{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--brand);font-weight:700;font-family:Outfit,system-ui,sans-serif}
 .meta{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:14px;color:var(--ink-2);margin:8px 0 24px}
 .summary{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:20px;margin:16px 0 8px}
+.summary p{max-width:none}
 .summary ol{margin:8px 0 0 20px;padding:0}
 .summary li{margin-bottom:6px}
 .grid2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px}
 table{width:100%;border-collapse:collapse;font-size:14px;margin:12px 0 20px}
 th,td{text-align:left;vertical-align:top;padding:10px 10px;border-bottom:1px solid var(--line)}
-th{font-family:Outfit;font-weight:700;background:var(--surface);position:sticky;top:0}
+th{font-family:Outfit,system-ui,sans-serif;font-weight:700;background:var(--surface);position:sticky;top:0}
 .tbl{overflow-x:auto;-webkit-overflow-scrolling:touch;border:1px solid var(--line);border-radius:12px}
 .tbl table{margin:0}
 .sev{display:inline-block;font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:999px;white-space:nowrap}
@@ -48,7 +49,14 @@ ul{padding-left:20px}
 li{margin-bottom:4px}
 .kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:12px;margin:12px 0}
 .kpi div{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px}
-.kpi b{display:block;font-family:Outfit;font-size:24px}
+.kpi b{display:block;font-family:Outfit,system-ui,sans-serif;font-size:24px}
+.steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}
+.steps3 div{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--card);font-size:14px}
+.steps3 b{display:block;font-family:Outfit,system-ui,sans-serif;font-size:16px;margin-bottom:6px}
+.steps3 .n{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;align-items:center;justify-content:center;font-size:13px;font-weight:700;margin-right:8px;font-family:Outfit,system-ui,sans-serif}
+.tight{margin:0;padding-left:18px;font-size:14px}.tight li{margin-bottom:6px}
+pre.wrap{white-space:pre-wrap}
+@media (max-width:700px){.cmp thead{display:none}.cmp tr{display:block;border:1px solid var(--line);border-radius:12px;margin:0 0 10px;padding:6px 10px;background:var(--card)}.cmp td{display:grid;grid-template-columns:110px 1fr;gap:8px;border:0;padding:6px 0;font-size:13px}.cmp td::before{content:attr(data-h);font-family:Outfit,system-ui,sans-serif;font-weight:700;color:var(--ink-3);font-size:12px}.cmp td:first-child{background:var(--surface);margin:-6px -10px 4px;padding:8px 10px;border-radius:12px 12px 0 0;display:block;font-family:Outfit,system-ui,sans-serif;font-weight:700}.cmp td:first-child::before{content:none}.tbl.cmpwrap{border:0}}
 @media (max-width:600px){h2{margin-top:1.6em}th,td{padding:8px 8px}}
 </style>
 
@@ -56,21 +64,21 @@ li{margin-bottom:4px}
 <body>
 <div class="wrap">
 <p class="eyebrow">Fundo · UI/UX Lead take-home · November 2026</p>
-<h1>Apply Now is the brand. The rest of Fundo has not caught up with it, and the application itself never says what the money costs.</h1>
+<h1>Fundo asks for your SSN before it shows what an advance typically costs. That is the first thing to fix.</h1>
 <div class="meta">
 <span>By Diego Munar</span>
-<span>Time spent: <span id="time-spent">about 4 hours of platform time, one sitting</span></span>
+<span>Time spent: <span id="time-spent">TIME_PLACEHOLDER</span></span>
 <span>Reference: <a href="https://claude.ai/artifact/KdUR9FzJjbYQ2GZfKCENzJ">Apply Now prototype</a></span>
 <span>Brief: <a href="https://fundo-llc.github.io/fundo-take-home/ui-ux-lead-challenge/">ui-ux-lead-challenge</a></span>
 </div>
 
 <div class="summary" id="summary">
 <h3 style="margin-top:0">Two-minute summary</h3>
-<p><b>What hurts most.</b> Fundo never tells a customer what the money costs before asking for their Social Security number: no rate, no weekly payment, no total, on the site or in any of the 12 Apply Now screens. The second problem sits on the same screen: "no credit check" is promised on screen 01 and contradicted by "regulated provider" language on screen 12 and by the privacy policy. Third, eligibility (not California or New York, not W-2-only income, $1,500 a month for 3 months) is revealed after nine screens of personal data, or never. Behind those: three product names across site, blog and app, two office addresses, marketing consent bundled into "Continue", a progress bar nobody can read with a screen reader, and an unsourced "5.0" next to a public Trustpilot 3.2.</p>
-<p><b>What I changed.</b> One new screen before the SSN that shows a worked example ($2,000 advance, $340 a week for 10 weeks, $3,400 total, labelled as an example), the four answers everyone needs (weekly payments, what a failed payment does, identity not credit, states not served) and the three steps left; and the SSN screen rewritten around why it is asked and what happens next. Drawn at 360 px with finished copy, plus error, declined, unsupported-state, returning-customer and slow-connection states. It ships behind a feature flag in a week.</p>
-<p><b>How I would prove it.</b> Twelve interviews recruited from the funnel first; then a 50/50 test on start-to-SSN conversion with guardrails on offer acceptance, ineligible submissions, support contacts and first-payment failures; about 4,000 starts per arm; Amplitude events per screen; a written rollback. More applications that cannot be funded would count as a loss.</p>
-<p><b>How the brand stays one brand.</b> Tokens extracted from Apply Now into a working <code>tokens.json</code>, ten components, voice rules, financial-content patterns, and a Claude skill that checks any screen, email or post against them, with a CI script that measures drift on every commit, the same setup I run on my own site.</p>
-<p><b>Not done, said plainly.</b> Social profiles could not be read by automated means; the real pricing grid is not public, so the example uses third-party figures; screens after the SSN are out of scope by the brief. <span id="links-line"></span></p>
+<p><b>The problem.</b> Fundo asks for a Social Security number before showing what an advance typically costs. Not on the site, not in the FAQ, not in any of the 12 Apply Now screens. Exact pricing needs bank data; a labelled example does not. On that same SSN screen, "no credit check" turns into "regulated provider, required to collect your SSN". And people from California or New York, or with W-2-only income, find out they don't qualify after nine screens, or never.</p>
+<p><b>The fix.</b></p><ul class="tight" style="margin-bottom:12px"><li>One screen before the SSN: a worked example ($2,000, $340 a week for 10 weeks, $3,400 total, labelled as an example), weekly payments, what a failed payment does, identity not credit, who is not eligible, and what comes next.</li><li>The SSN screen rewritten: why we ask, what we don't do with it, what's next.</li><li>360 px, finished copy, five edge cases drawn, behind a feature flag in a week.</li></ul>
+<p><b>The proof.</b></p><ul class="tight" style="margin-bottom:12px"><li>Twelve interviews recruited from the funnel first.</li><li>A 50/50 test on eligible-start-to-SSN, with guardrails on offer acceptance, support tickets and first-payment failures; about 4,000 starts per arm.</li><li>Amplitude events per screen; rollback rule written before launch.</li></ul>
+<p><b>The system.</b> Tokens pulled from Apply Now into a working <code>tokens.json</code>, ten components, voice rules, financial-content patterns, a Claude skill that checks any screen, email or post against them, and a CI script that measures drift on every commit.</p>
+<p><b>Gaps.</b> Social profiles block automated readers; the real pricing grid is not public, so the example uses third-party figures; after the SSN is out of scope by the brief. <span id="links-line">Editable screens: <a href="https://claude.ai/artifact/ThRQYrexnkorhpjuMiRFbd">Claude Design project</a>. Files: <a href="https://github.com/Godiem95/fundo-take-home">GitHub</a>.</span></p>
 </div>
 
 <nav class="toc" aria-label="Sections">
@@ -78,123 +86,175 @@ li{margin-bottom:4px}
 </nav>
 
 <!-- PART 1 -->
+<style>
+.issues{display:flex;flex-direction:column;gap:12px;margin:12px 0 8px}
+.issue{border:1px solid var(--line);border-radius:12px;padding:14px 16px;background:var(--card)}
+.ihead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+.inum{font-family:Outfit,system-ui,sans-serif;font-weight:700;font-size:18px;min-width:22px}
+.iloc{font-family:Outfit,system-ui,sans-serif;font-weight:700;font-size:15px}
+.iprob{margin:0 0 6px;max-width:none}
+.iwhy{margin:0 0 6px;color:var(--ink-2);font-size:14px;max-width:none}
+.iev{margin:0;font-size:13px;color:var(--ink-3)}
+.irows{display:flex;flex-direction:column;gap:6px;margin:8px 0 12px}
+.irow{display:grid;grid-template-columns:24px 78px minmax(0,1fr);gap:10px;align-items:start;padding:8px 10px;border:1px solid var(--line);border-radius:10px;font-size:13.5px;background:var(--card)}
+.irow .iev{display:inline}
+@media (max-width:640px){.irow{grid-template-columns:24px 1fr}.irow .sev{grid-column:2}.irow div{grid-column:1/-1}}
+.issue.has-img{display:grid;grid-template-columns:minmax(0,1fr) 150px;gap:16px;align-items:start}
+.imedia{display:flex;flex-direction:column;gap:8px}
+.ifig{margin:0}
+.ifig img{width:100%;height:auto;display:block;border:1px solid var(--line);border-radius:8px;background:#fff}
+.ifig figcaption{font-size:11px;line-height:1.35;color:var(--ink-3);margin-top:4px}
+@media (max-width:640px){.issue.has-img{grid-template-columns:1fr}.imedia{flex-direction:row;flex-wrap:wrap}.ifig{flex:1 1 140px}}
+.bars{display:flex;flex-direction:column;gap:6px;margin:12px 0 8px}
+.bar{display:grid;grid-template-columns:150px minmax(0,1fr) 78px;gap:10px;align-items:center;font-size:14px}
+.bar .nm{color:var(--ink-2)}
+.bar .nm b{font-family:Outfit,system-ui,sans-serif;color:var(--ink);margin-right:6px}
+.bar .tr{height:18px;background:var(--surface);border-radius:999px;overflow:hidden;position:relative}
+.bar .tr i{position:absolute;left:0;top:0;bottom:0;background:#8ab8ff;border-radius:999px}
+.bar .tr b{position:absolute;top:0;bottom:0;background:#003b8e;border-radius:999px}
+.bar .tr.hot i{background:#ffd6cf}.bar .tr.hot b{background:#d92d20}
+.bar .rg{font-variant-numeric:tabular-nums;color:var(--ink-3);font-size:13px;text-align:right}
+.bartot{display:grid;grid-template-columns:150px minmax(0,1fr) 70px;gap:10px;align-items:center;font-size:14px;margin-top:10px;padding-top:10px;border-top:1px solid var(--line)}
+.legend{font-size:12px;color:var(--ink-3);margin:6px 0 0}
+@media (max-width:640px){.bar,.bartot{grid-template-columns:96px minmax(0,1fr) 70px}.bar .rg{font-size:12px}}
+.fr{font-size:13px;color:var(--ink-2);margin:2px 0 8px 160px}
+.ideas{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:12px;margin:12px 0 8px}
+.idea{border:1px solid var(--line);border-radius:12px;background:var(--card);overflow:hidden}
+.idea .ihd{font-family:Outfit,system-ui,sans-serif;font-weight:700;padding:10px 14px;background:var(--surface);border-bottom:1px solid var(--line)}
+.idea .ihd b{color:var(--brand);margin-right:4px}
+.idea .ibody{padding:10px 14px;display:flex;flex-direction:column;gap:6px}
+.idea .ibody p{margin:0;font-size:13.5px;line-height:1.45;max-width:none}
+.idea .ibody span{display:block;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-3);font-weight:700}
+@media (max-width:640px){.fr{margin-left:0}}
+</style>
 <h2 id="part1">Part 1 · Audit</h2>
-<p>Method: every public surface walked on a phone (390 px, then 360 px) and compared against the Apply Now prototype, screen by screen. Every row carries a link or a quoted phrase as evidence. Severity: <span class="sev critical">critical</span> costs Fundo money or legal exposure today; <span class="sev high">high</span> loses or misleads customers; <span class="sev medium">medium</span> erodes trust or consistency; <span class="sev low">low</span> is polish. Instagram, Facebook and LinkedIn refuse automated readers, so the social findings come from what the site links to and from search; that gap is stated rather than guessed around.</p>
+<p>Every public surface, on a phone, against the Apply Now prototype. Every finding has a link, a quote or a screenshot. <span class="sev critical">critical</span> costs money or legal exposure today · <span class="sev high">high</span> loses or misleads customers · <span class="sev medium">medium</span> erodes trust · <span class="sev low">low</span> is polish.</p>
 
-<h3>Ranked issues (top five first)</h3>
-<div class="tbl"><table>
-<thead><tr><th style="width:36px">#</th><th>Location</th><th>What is wrong</th><th>Why it matters</th><th>Severity</th><th>Evidence</th></tr></thead>
-<tbody>
-<tr><td>1</td><td>Whole funnel: fundo.com, FAQ, Apply Now screens 01 to 12</td><td>Nothing says what the money costs before the SSN. No factor rate, no fee, no payment cadence, no total payback example. The only cost sentence on the site is "usually carry much higher rates than other financing options". The first thing the customer learns about price is the offer, after bank connection.</td><td>Customers hand over an SSN without being able to judge suitability. Third parties report factor rates of 1.7 to 3.5 (a $5,000 advance repaid as $8,500 to $17,500), weekly ACH, a $25 same-day fee and a $1,500 default fee. "Charged fees or interest you didn't expect" is the top CFPB complaint theme. FTC actions against RCG Advances, Dave and Cleo, and the DC and NY attorneys general against EarnIn, DailyPay and MoneyLion, all target "not a loan" framing plus unclear cost. This is the audit's main finding and the subject of Part 2.</td><td><span class="sev critical">critical</span></td><td><a href="https://fundo.com/faqs/">fundo.com FAQ</a> · <a href="https://finder.com/business-loans/fundo-review">Finder review</a> · <a href="https://www.bbb.org/us/fl/north-miami-beach/profile/financial-services/fundo-0633-90575447/complaints">BBB complaints</a> · <a href="https://www.trustpilot.com/review/fundo.com">Trustpilot 3.2</a></td></tr>
-<tr><td>2</td><td>Apply Now 01, 12 · fundo.com home and FAQ · Privacy Policy</td><td>"No credit check" and "won't hurt your credit score" are promised on the home page and on screen 01. Screen 12 then says Fundo is "a regulated financial service provider" that is "required to collect your SSN". The FAQ adds an open-bankruptcy exception, and the Privacy Policy says data may come from "credit bureaus, credit reporting agencies". The promise and the fine print do not match, exactly at the most sensitive step.</td><td>The SSN screen is where trust is won or lost. A contradiction here is a drop-off reason and a compliance question ("regulated" by whom, for an MCA, needs legal review before it stays on screen).</td><td><span class="sev critical">critical</span></td><td>Prototype screen 12 · <a href="https://fundo.com/privacy-policy/">Privacy Policy</a> · <a href="https://fundo.com/faqs/">FAQ "What if I have bad credit?"</a></td></tr>
-<tr><td>3</td><td>Apply Now 05 and 10 · fundo.com/apply-now</td><td>Eligibility is checked too late or not at all. California and New York are not served, W-2-only income does not qualify, 44 banks are excluded and revenue must be $1,500 a month for 3 months. The flow still asks email, phone, name, income source, business details and the full address before any of this is said, and the "job or other sources" option on screen 05 carries no warning. The state field is on screen 10, after nine screens.</td><td>Ineligible people reach the SSN screen, give personal data for nothing, and land on marketing lists. The brief itself warns that "unfundable applications" are not a win. Declining late also produces the one-star reviews that say "No approval for no reason."</td><td><span class="sev critical">critical</span></td><td>Prototype screens 05, 10 · <a href="https://fundo.com/apply-now/">fundo.com/apply-now "We don't work with"</a> · <a href="https://fundo.com/non-eligible-banks">Non-eligible banks</a></td></tr>
-<tr><td>4</td><td>fundo.com home, blog, footers, portal, Apply Now 01</td><td>The product has three names. Home page and FAQ sell a "Merchant Cash Advance"; every 2026 blog post and both footer disclaimers say "Revenue-Based Financing" (once hyphenated, once not); the Apply Now button says "Get Your Advance"; a home-page testimonial calls it "a lending option". Two office addresses appear in footers (Hollywood, FL on most pages; North Miami Beach on How it Works and on the BBB profile the seal links to). Copyright reads "© 2024" on the site and "@ 2026" on the portal and in Apply Now.</td><td>A customer comparing the site, the application and the contract meets three products and two companies. For a financing company, naming is also a legal position: MCA and RBF are treated differently by the state disclosure laws that already exclude CA and NY.</td><td><span class="sev high">high</span></td><td><a href="https://fundo.com">Home</a> · <a href="https://fundo.com/airbnb-occupancy-rate-cash-flow/">Blog post</a> · <a href="https://fundo.com/how-it-works/">How it Works footer</a> · <a href="https://portal.fundo.com/login">Portal</a></td></tr>
-<tr><td>5</td><td>Apply Now 01 and 02</td><td>Consent is bundled. Screen 01 ties "Get Your Advance" to "consent to receive offers and updates from Fundo via email" with no checkbox. Screen 02 shows an unchecked box for "account-related calls and texts" that reads as optional but is needed to run the application, next to a second box for promotional texts, with the TCPA line in 11 px grey.</td><td>Marketing consent that is not separable from the service is the pattern regulators and class-action firms look for first; it is also a reason the first screen feels like a lead form rather than an application.</td><td><span class="sev high">high</span></td><td>Prototype screens 01, 02 · <a href="https://fundo.com/messaging-terms/">Messaging terms</a></td></tr>
-<tr><td>6</td><td>Apply Now, all screens · portal login · fundo.com images</td><td>Accessibility gaps at the core of the flow: the progress bar has no label, step count or accessible name; cyan headline accents (#00b9da on white, about 2.6:1) fail AA; the "Need any help?" chat bubble sits on top of the primary button on screen 01; audience cards use emoji as icons; the portal uses placeholders as the only labels and renders the login form twice in the DOM; home-page images have empty alt text and the header has an empty "#" link.</td><td>Screen-reader and low-vision customers cannot tell where they are in a 12-step flow, and a bubble over the main button is a tap error on every phone.</td><td><span class="sev high">high</span></td><td>Prototype screens 01 to 12 · <a href="https://portal.fundo.com/login">Portal login</a> · <a href="https://fundo.com">Home (image alt)</a></td></tr>
-<tr><td>7</td><td>Apply Now 03, 04, 07, 09</td><td>Twelve screens to reach the SSN, several carrying one field: first name and last name on separate screens, business start split into two dropdowns, and a "Checking your information" interstitial whose three green checkmarks are decorative. Screen 01 promises "Take two minutes to submit your basic info"; the estimate below puts start-to-SSN at 3 to 4 minutes before bank connection.</td><td>Each extra screen is a place to abandon on a phone, and the two-minute promise is the first expectation the flow breaks.</td><td><span class="sev high">high</span></td><td>Prototype screens 03, 04, 07, 09; time estimate table below</td></tr>
-<tr><td>8</td><td>fundo.com home, /reviews, /how-it-works</td><td>Trust claims without a source: "5.0" and "Trusted by hundreds of customers" with no platform named; a reviews page with 16 five-star quotes, duplicates (Kenneth D. and Kenneth Dupuis, same text) and no negatives; the headline "Everyone Loves Us Except the Competition". Meanwhile Trustpilot shows 3.2 with 27% one-star reviews and no company replies, and BBB a B rating with 105 complaints in three years.</td><td>Anyone who googles Fundo before entering an SSN sees both pages. An unsourced 5.0 next to a public 3.2 reads as a lie, which is worse than a 3.2.</td><td><span class="sev high">high</span></td><td><a href="https://fundo.com/reviews/">Reviews page</a> · <a href="https://www.trustpilot.com/review/fundo.com">Trustpilot</a> · <a href="https://www.bbb.org/us/fl/north-miami-beach/profile/financial-services/fundo-0633-90575447">BBB</a></td></tr>
-<tr><td>9</td><td>fundo.com home, FAQ, Apply Now 01</td><td>Funding-speed claims disagree: "Funded Up To $10,000 in hours" and "Same-day funding available until 3 PM ET" on the home page; "Funds deposited as fast as the same business day" on screen 01; "the business day following the approval" and "preliminary approval pending a verification interview" in the FAQ. Reviews mention the interview as the step that delays funding.</td><td>Speed is the main promise to a driver who needs a repair today. A promise that moves between pages becomes a complaint.</td><td><span class="sev medium">medium</span></td><td><a href="https://fundo.com">Home</a> · <a href="https://fundo.com/faqs/">FAQ</a> · Prototype screen 01</td></tr>
-<tr><td>10</td><td>Blog post, nav, WordPress interstitial</td><td>Four different "apply" destinations: the nav goes to app.fundo.com/apply-now?PID=8888 (an affiliate parameter shown to everyone), the blog's closing link to app.fundo.com with no path, a WordPress interstitial at fundo.com/apply-now, and an "Apply Now!" baked into an image that is not a link. A public staging copy of the home page is indexed at applicationfrontendwp.azurewebsites.net.</td><td>Attribution is broken (every organic visitor looks like partner 8888) and conversion from content cannot be measured per entry point, which Part 3 needs.</td><td><span class="sev medium">medium</span></td><td><a href="https://fundo.com/airbnb-occupancy-rate-cash-flow/">Blog post CTAs</a> · <a href="https://fundo.com/apply-now/">Interstitial</a></td></tr>
-<tr><td>11</td><td>portal.fundo.com/login</td><td>The customer portal login has no help link, no "can't receive the code" path, no link back to fundo.com, and a marketing title and meta description ("Explore innovative financial opportunities"). The one thing BBB complainants ask for most, an itemized balance ("no way for you to see how much you have paid or how much you owe"), starts behind this door.</td><td>Returning customers are the cheapest revenue (renewals after 50% repaid). A dead-end login turns them into support tickets.</td><td><span class="sev medium">medium</span></td><td><a href="https://portal.fundo.com/login">Portal</a> · <a href="https://www.trustpilot.com/review/fundo.com">Trustpilot, Heather Y.</a></td></tr>
-<tr><td>12</td><td>Terms of Service, Privacy Policy</td><td>Legal pages contradict the product: the Terms (last modified March 2023) choose New York law for a company that excludes New York customers and contain a class-action and jury-trial waiver with no arbitration path; the Privacy Policy says Fundo "may sell certain categories of your personal data" and cites a "128-bit secure browser" while the home page says 256-bit. Flag for legal and compliance; design cannot fix this, but the SSN screen should not link to it as reassurance until it is fixed.</td><td>Any customer or journalist who reads the policy finds the sale-of-data clause under a "Is my information secure?" promise.</td><td><span class="sev medium">medium</span></td><td><a href="https://fundo.com/terms-of-service/">Terms</a> · <a href="https://fundo.com/privacy-policy/">Privacy</a></td></tr>
-<tr><td>13</td><td>fundo.com (copy)</td><td>Typos and casing drift a brand owner would catch in one pass: "Thats" (no apostrophe), "SPECIALITY", "self- employed", "(866)EZ-FUNDO", "Acredited" in the BBB badge alt text, "one time code", "apply now" next to "GET APPROVED" next to "Get Your Funds". Author archives expose the agency's usernames ("alecnetvisits-com", "terrynetvisits-com").</td><td>Small individually; together they say nobody owns the words.</td><td><span class="sev medium">medium</span></td><td><a href="https://fundo.com">Home</a> · <a href="https://fundo.com/blog/">Blog index</a></td></tr>
-<tr><td>14</td><td>Instagram, Facebook, LinkedIn (links in every footer)</td><td>Not auditable by automated means (all three block readers), so this row is an assumption: the Instagram link carries a tracking parameter (igshid), the Facebook URL is a numeric legacy slug, and a search for "fundo" returns Google's retired Fundo product, a Brazilian influencer platform and an Australian lender before this company. Brand findability is a problem before brand consistency is.</td><td>Footer icons that lead to thin or inconsistent profiles subtract trust rather than add it.</td><td><span class="sev medium">medium</span></td><td>Footer links on fundo.com and portal; search results for "fundo" (assumption stated)</td></tr>
-<tr><td>15</td><td>Apply Now 06</td><td>Business name helper says "Use the name that appears on your bank account". The underwriting blog post says sole proprietors may be reviewed on a personal checking account. A driver whose account says "Maria Lopez" does not know what to type.</td><td>Hesitation on a screen that should take five seconds; mismatched names later block verification.</td><td><span class="sev low">low</span></td><td>Prototype screen 06 · <a href="https://fundo.com/fundo-bank-account-underwriting/">Underwriting post</a></td></tr>
-<tr><td>16</td><td>Apply Now 12</td><td>The SSN screen does not say what happens next (bank connection, then offer), does not repeat the no-credit-check promise where it matters, and its heading carries an em dash ("identity — what's your SSN?"), the only one in the flow.</td><td>Small copy, large moment. Covered by the Part 2 redesign.</td><td><span class="sev low">low</span></td><td>Prototype screen 12</td></tr>
-<tr><td>17</td><td>fundo.com/non-eligible-banks</td><td>44 raw entries with duplicates ("Meta bank" and "Meta Bank"), inconsistent casing, no search, no reason given, and "click the blue help button" as the only help path.</td><td>The page a declined applicant is sent to is the least designed page on the site.</td><td><span class="sev low">low</span></td><td><a href="https://fundo.com/non-eligible-banks">Non-eligible banks</a></td></tr>
-<tr><td>18</td><td>Blog index and posts</td><td>Two pagination patterns on one index (numbered pages plus "Load More"), no dates or authors on cards, two cards with empty alt text, alt text that describes AI-generated scenery ("pink dolphins out the window") instead of information, and two versions of the footer disclaimer on the same post.</td><td>The blog is the main organic entry point (13 question-style posts); its hygiene sets the first impression for most new visitors.</td><td><span class="sev low">low</span></td><td><a href="https://fundo.com/blog/">Blog index</a></td></tr>
-</tbody></table></div>
+<h3>Ranked issues (top eight as cards with evidence, the rest in one line)</h3>
+<div class="issues">
+<div class="issue has-img"><div class="itext"><div class="ihead"><span class="inum">1</span><span class="sev critical">critical</span><span class="iloc">Whole funnel · fundo.com, FAQ, Apply Now 01 to 12</span></div><p class="iprob">Nothing says what the money costs before the SSN: no rate, no fee, no cadence, no total. The only cost line on the site is "usually carry much higher rates than other financing options".</p><p class="iwhy"><b>Why it matters.</b> People give an SSN without being able to judge suitability. Third parties report factor rates of 1.7 to 3.5, weekly ACH, a $25 same-day fee and a $1,500 default fee; "fees you didn't expect" is the top CFPB complaint. The FTC's RCG Advances case is the MCA precedent; the Dave, Cleo, EarnIn and DailyPay actions are consumer cash-advance apps with the same disclosure pattern.</p><p class="iev">Evidence: <a href="https://fundo.com/faqs/">FAQ</a> · <a href="https://finder.com/business-loans/fundo-review">Finder</a> · <a href="https://www.bbb.org/us/fl/north-miami-beach/profile/financial-services/fundo-0633-90575447/complaints">BBB complaints</a> · <a href="https://www.trustpilot.com/review/fundo.com">Trustpilot 3.2</a></p></div><div class="imedia"><figure class="ifig"><img src="img/issue-01-ssn.jpg" alt="Prototype screen 12: "Let's verify your identity, what's your SSN?" with no cost shown anywhere before it" loading="lazy"><figcaption>Prototype screen 12: "Let's verify your identity, what's your SSN?" with no cost shown anywhere before it</figcaption></figure></div></div>
+<div class="issue has-img"><div class="itext"><div class="ihead"><span class="inum">2</span><span class="sev critical">critical</span><span class="iloc">Apply Now 01 and 12 · home page · Privacy Policy</span></div><p class="iprob">"No credit check" on the home page and screen 01; "regulated financial service provider, required to collect your SSN" on screen 12; the privacy policy says data may come from "credit bureaus".</p><p class="iwhy"><b>Why it matters.</b> The promise and the fine print contradict each other on the most sensitive screen. "Regulated" by whom, for an MCA, needs legal review.</p><p class="iev">Evidence: Prototype 12 · <a href="https://fundo.com/privacy-policy/">Privacy Policy</a> · <a href="https://fundo.com/faqs/">FAQ</a></p></div><div class="imedia"><figure class="ifig"><img src="img/issue-02-no-credit-check.jpg" alt="Prototype screen 01 hero: "Get up to $10,000. No credit check."" loading="lazy"><figcaption>Prototype screen 01 hero: "Get up to $10,000. No credit check."</figcaption></figure></div></div>
+<div class="issue has-img"><div class="itext"><div class="ihead"><span class="inum">3</span><span class="sev critical">critical</span><span class="iloc">Apply Now 05 and 10 · fundo.com/apply-now</span></div><p class="iprob">Eligibility comes too late or never: not CA or NY, not W-2-only, a list of excluded banks, $1,500 a month for 3 months. The flow takes email, phone, name, income, business and full address first; the state field is screen 10.</p><p class="iwhy"><b>Why it matters.</b> Ineligible people reach the SSN, hand over data for nothing and land on marketing lists. The brief's own words: application quality matters as much as completion.</p><p class="iev">Evidence: Prototype 05, 10 · <a href="https://fundo.com/apply-now/">We don't work with</a> · <a href="https://fundo.com/non-eligible-banks">Non-eligible banks</a></p></div><div class="imedia"><figure class="ifig"><img src="img/issue-03-address.jpg" alt="Prototype screen 10, home address: the first place a state is asked, nine screens in" loading="lazy"><figcaption>Prototype screen 10, home address: the first place a state is asked, nine screens in</figcaption></figure></div></div>
+<div class="issue has-img"><div class="itext"><div class="ihead"><span class="inum">4</span><span class="sev high">high</span><span class="iloc">Site, blog, footers, portal, Apply Now 01</span></div><p class="iprob">Two product names: "Merchant Cash Advance" (home, FAQ) and "Revenue-Based Financing" (every 2026 blog post and both footer disclaimers), while the app button says "Get Your Advance". Visually the site and the app are two brands: the site uses a light-blue "APPLY NOW" in uppercase with square-ish corners and a dark hero photo; the app uses a navy pill button, sentence case and a white card. Two office addresses in footers. "© 2024" on the site, "@ 2026" in the app.</p><p class="iwhy"><b>Why it matters.</b> A customer comparing site, app and contract meets two products and two companies. Naming is also a legal position under state disclosure laws.</p><p class="iev">Evidence: <a href="https://fundo.com">Home</a> · <a href="https://fundo.com/airbnb-occupancy-rate-cash-flow/">Blog post</a> · <a href="https://fundo.com/how-it-works/">How it Works footer</a> · <a href="https://portal.fundo.com/login">Portal</a></p></div><div class="imedia"><figure class="ifig"><img src="img/issue-04-home-mca.jpg" alt="fundo.com home on a phone: "A Merchant Cash Advance Thats Perfect For Gig Workers", button "APPLY NOW"" loading="lazy"><figcaption>fundo.com home on a phone: "A Merchant Cash Advance Thats Perfect For Gig Workers", button "APPLY NOW"</figcaption></figure></div></div>
+<div class="issue has-img"><div class="itext"><div class="ihead"><span class="inum">5</span><span class="sev high">high</span><span class="iloc">Apply Now 01 and 02</span></div><p class="iprob">Marketing consent is bundled into "By continuing" with no checkbox; screen 02 shows a required consent as an unchecked optional box next to a promo-texts box.</p><p class="iwhy"><b>Why it matters.</b> Consent that cannot be separated from the service is the first thing a regulator or class-action firm looks for; it also makes screen 01 read as a lead form.</p><p class="iev">Evidence: Prototype 01, 02 · <a href="https://fundo.com/messaging-terms/">Messaging terms</a></p></div><div class="imedia"><figure class="ifig"><img src="img/issue-05-consent.jpg" alt="Prototype screen 02: two consent checkboxes under the Continue button, the required one unmarked" loading="lazy"><figcaption>Prototype screen 02: two consent checkboxes under the Continue button, the required one unmarked</figcaption></figure></div></div>
+<div class="issue has-img"><div class="itext"><div class="ihead"><span class="inum">6</span><span class="sev high">high</span><span class="iloc">Apply Now, all screens · portal · site images</span></div><p class="iprob">Progress bar with no label or step count; cyan accents at 2.35:1 on white; chat bubble over the primary button on screen 01; emoji as icons; the portal login form rendered twice in the DOM; empty alt text on home-page images.</p><p class="iwhy"><b>Why it matters.</b> Screen-reader and low-vision customers cannot tell where they are in a 12-step flow; a bubble over the main button is a tap error on every phone.</p><p class="iev">Evidence: Prototype 01 to 12 · <a href="https://portal.fundo.com/login">Portal</a> · <a href="https://fundo.com">Home</a></p></div><div class="imedia"><figure class="ifig"><img src="img/issue-06-chat-over-button.jpg" alt="Prototype screen 01: the "Need any help?" chat bubble sits over the "Get Your Advance" button" loading="lazy"><figcaption>Prototype screen 01: the "Need any help?" chat bubble sits over the "Get Your Advance" button</figcaption></figure></div></div>
+<div class="issue has-img"><div class="itext"><div class="ihead"><span class="inum">7</span><span class="sev high">high</span><span class="iloc">Apply Now 03, 04, 07, 09</span></div><p class="iprob">Twelve screens to the SSN, several with one field: first and last name separate, business start as two dropdowns, a "Checking your information" interstitial with decorative checkmarks. Screen 01 promises "two minutes".</p><p class="iwhy"><b>Why it matters.</b> Each screen is a place to leave on a phone; start-to-SSN is 3 to 6 minutes by the estimate below, so the two-minute promise is the first expectation the flow breaks.</p><p class="iev">Evidence: Prototype 03, 04, 07, 09</p></div><div class="imedia"><figure class="ifig"><img src="img/issue-07-twelve-screens.jpg" alt="The prototype canvas: twelve screens from email to SSN" loading="lazy"><figcaption>The prototype canvas: twelve screens from email to SSN</figcaption></figure></div></div>
+<div class="issue has-img"><div class="itext"><div class="ihead"><span class="inum">8</span><span class="sev high">high</span><span class="iloc">fundo.com home, /reviews, /how-it-works</span></div><p class="iprob">An unsourced "5.0" and "Trusted by hundreds"; a reviews page with 16 five-star quotes, duplicates and no negatives; headline "Everyone Loves Us Except the Competition". Trustpilot shows 3.2 with 27% one-star and no replies; BBB a B with 105 complaints.</p><p class="iwhy"><b>Why it matters.</b> Anyone who googles Fundo before entering an SSN sees both. An unsourced 5.0 next to a public 3.2 reads as a lie.</p><p class="iev">Evidence: <a href="https://fundo.com/reviews/">Reviews</a> · <a href="https://www.trustpilot.com/review/fundo.com">Trustpilot</a> · <a href="https://www.bbb.org/us/fl/north-miami-beach/profile/financial-services/fundo-0633-90575447">BBB</a></p></div><div class="imedia"><figure class="ifig"><img src="img/issue-08-five-point-zero.jpg" alt="fundo.com/how-it-works: "5.0, Trusted by hundreds of customers", no source" loading="lazy"><figcaption>fundo.com/how-it-works: "5.0, Trusted by hundreds of customers", no source</figcaption></figure><figure class="ifig"><img src="img/issue-08-trustpilot.jpg" alt="Trustpilot: Fundo, 216 reviews, 3.2" loading="lazy"><figcaption>Trustpilot: Fundo, 216 reviews, 3.2</figcaption></figure></div></div>
+</div>
+<h4>Issues 9 to 18, one line each</h4>
+<div class="irows">
+<div class="irow"><span class="inum">9</span><span class="sev medium">medium</span><div><b>Home, FAQ, Apply Now 01.</b> Funding speed changes by page: "funded in hours", "same-day until 3 PM ET", "as fast as the same business day", "the business day following approval", "pending a verification interview". <span class="iev"><a href="https://fundo.com">Home</a> · <a href="https://fundo.com/faqs/">FAQ</a> · Prototype 01</span></div></div>
+<div class="irow"><span class="inum">10</span><span class="sev medium">medium</span><div><b>Blog, nav, WordPress interstitial.</b> Four different "apply" destinations, one of them an affiliate URL (PID=8888) shown to everyone, one an "Apply Now!" baked into an image. <span class="iev"><a href="https://fundo.com/airbnb-occupancy-rate-cash-flow/">Blog CTAs</a> · <a href="https://fundo.com/apply-now/">Interstitial</a></span></div></div>
+<div class="irow"><span class="inum">11</span><span class="sev medium">medium</span><div><b>portal.fundo.com/login.</b> No help link, no "can't receive the code" path, no way back to the site, a marketing meta description. <span class="iev"><a href="https://portal.fundo.com/login">Portal</a> · <a href="https://www.trustpilot.com/review/fundo.com">Trustpilot</a></span></div></div>
+<div class="irow"><span class="inum">12</span><span class="sev medium">medium</span><div><b>Terms of Service, Privacy Policy.</b> The privacy policy says Fundo "may sell certain categories of your personal data" under a page that promises security, cites a "128-bit secure browser" while the home page says 256-bit, and the Terms were last modified in 2023. <span class="iev"><a href="https://fundo.com/terms-of-service/">Terms</a> · <a href="https://fundo.com/privacy-policy/">Privacy</a></span></div></div>
+<div class="irow"><span class="inum">13</span><span class="sev medium">medium</span><div><b>fundo.com copy.</b> "Thats", "SPECIALITY", "self- employed", "(866)EZ-FUNDO", "Acredited", "one time code"; "apply now" next to "GET APPROVED". <span class="iev"><a href="https://fundo.com">Home</a> · <a href="https://fundo.com/blog/">Blog index</a></span></div></div>
+<div class="irow"><span class="inum">14</span><span class="sev low">unverified</span><div><b>Instagram, Facebook, LinkedIn.</b> Not auditable by automated means (all three block readers), stated as an assumption. <span class="iev">Footer links on fundo.com and portal</span></div></div>
+<div class="irow"><span class="inum">15</span><span class="sev low">low</span><div><b>Apply Now 06.</b> "Use the name that appears on your bank account" while the underwriting post says sole proprietors may use personal checking. <span class="iev">Prototype 06 · <a href="https://fundo.com/fundo-bank-account-underwriting/">Underwriting post</a></span></div></div>
+<div class="irow"><span class="inum">16</span><span class="sev low">low</span><div><b>Apply Now 12.</b> No "what happens next" and no repeat of the credit promise where it matters most. <span class="iev">Prototype 12</span></div></div>
+<div class="irow"><span class="inum">17</span><span class="sev low">low</span><div><b>fundo.com/non-eligible-banks.</b> 44 raw entries with duplicates, mixed casing, no search, no reasons, chat as the only help. <span class="iev"><a href="https://fundo.com/non-eligible-banks">Non-eligible banks</a></span></div></div>
+<div class="irow"><span class="inum">18</span><span class="sev low">low</span><div><b>Blog index and posts.</b> Two pagination patterns, no dates on cards, empty or decorative alt text, two versions of the disclaimer on one post. <span class="iev"><a href="https://fundo.com/blog/">Blog index</a></span></div></div>
+</div>
 
 <h3>Apply Now, screen by screen: time and friction</h3>
-<p>Estimates, not measurements: the live app could not be instrumented and the brief asks for the designer's read. Times assume a phone, one hand, a first-time applicant who has the information at hand. The instrumentation in Part 3 replaces these guesses with data in week one.</p>
-<div class="tbl"><table>
-<thead><tr><th>#</th><th>Screen</th><th>Est. time</th><th>Likely friction and why people leave</th></tr></thead>
-<tbody>
-<tr><td>01</td><td>Email</td><td class="num">25 to 40 s</td><td>Long landing page before the first field; "Get Your Advance" promises money for an email; marketing consent bundled; chat bubble over the button. Drop reason: "I don't know what this costs yet."</td></tr>
-<tr><td>02</td><td>Mobile number</td><td class="num">20 to 30 s</td><td>Two consent checkboxes, one of them required but not marked; fear of calls. Drop reason: spam.</td></tr>
-<tr><td>03</td><td>First name</td><td class="num">8 to 12 s</td><td>None, but it is a whole screen for one word.</td></tr>
-<tr><td>04</td><td>Last name</td><td class="num">8 to 12 s</td><td>Same. 03 and 04 are one screen in every competitor flow.</td></tr>
-<tr><td>05</td><td>Income source</td><td class="num">15 to 25 s</td><td>Good "Why we ask" pattern. The third option (job or other sources) leads to ineligibility that is not disclosed; chips like "1099" and "W-2" help the right people and confuse the rest.</td></tr>
-<tr><td>06</td><td>Business name</td><td class="num">15 to 30 s</td><td>Sole proprietors do not have one; the bank-account hint conflicts with personal-checking underwriting.</td></tr>
-<tr><td>07</td><td>Business start</td><td class="num">15 to 25 s</td><td>Two native dropdowns; month precision is false precision for a driver who "started around 2023". Three-month minimum not mentioned.</td></tr>
-<tr><td>08</td><td>Ownership</td><td class="num">8 to 12 s</td><td>51% preselected; fast, but preselecting an eligibility answer is a risk.</td></tr>
-<tr><td>09</td><td>Checking your information</td><td class="num">3 to 6 s</td><td>Decorative wait with three fake checks. Reads as theatre; delete or make it do real work (duplicate account, state check).</td></tr>
-<tr><td>10</td><td>Home address</td><td class="num">35 to 60 s</td><td>Four fields, state dropdown, autocomplete promised in a hint. First place a CA or NY resident could be told they are not eligible, and they are not.</td></tr>
-<tr><td>11</td><td>Date of birth</td><td class="num">15 to 25 s</td><td>Dropdown plus two inputs; "e.g. March 27, 1990" helper. Fine.</td></tr>
-<tr><td>12</td><td>SSN</td><td class="num">30 to 90 s, or exit</td><td>The decision screen. No cost seen, no "what happens next", "regulated" claim, and the credit-check promise is not repeated. This is where people stop to google "fundo reviews".</td></tr>
-<tr><td></td><td><b>Start to SSN</b></td><td class="num"><b>3.3 to 6 min</b></td><td>Versus "Take two minutes" on screen 01.</td></tr>
-</tbody></table></div>
+<p>Estimates, not measurements: the live app could not be instrumented, so this is the designer's read on a phone, one hand, first-time applicant with the information at hand. Part 3's instrumentation replaces every bar with data in week one. Dark bar: minimum; light bar: maximum. Red: the screens where people leave.</p>
+<div class="bars">
+<div class="bar"><span class="nm"><b>01</b>Email</span><span class="tr hot" role="img" aria-label="Email: 25 to 40 seconds"><i style="width:44%"></i><b style="left:0;width:28%"></b></span><span class="rg">25 to 40 s</span></div>
+<p class="fr">Long page, no cost, consent bundled, chat over the button</p>
+<div class="bar"><span class="nm"><b>02</b>Mobile number</span><span class="tr hot" role="img" aria-label="Mobile number: 20 to 30 seconds"><i style="width:33%"></i><b style="left:0;width:22%"></b></span><span class="rg">20 to 30 s</span></div>
+<p class="fr">Two consent boxes, fear of calls</p>
+<div class="bar"><span class="nm"><b>03</b>First name</span><span class="tr" role="img" aria-label="First name: 8 to 12 seconds"><i style="width:13%"></i><b style="left:0;width:9%"></b></span><span class="rg">8 to 12 s</span></div>
+<p class="fr">A whole screen for one word</p>
+<div class="bar"><span class="nm"><b>04</b>Last name</span><span class="tr" role="img" aria-label="Last name: 8 to 12 seconds"><i style="width:13%"></i><b style="left:0;width:9%"></b></span><span class="rg">8 to 12 s</span></div>
+<p class="fr">Same; one screen with 03 everywhere else</p>
+<div class="bar"><span class="nm"><b>05</b>Income source</span><span class="tr hot" role="img" aria-label="Income source: 15 to 25 seconds"><i style="width:28%"></i><b style="left:0;width:17%"></b></span><span class="rg">15 to 25 s</span></div>
+<p class="fr">Good why-we-ask; W-2 option leads to a hidden decline</p>
+<div class="bar"><span class="nm"><b>06</b>Business name</span><span class="tr" role="img" aria-label="Business name: 15 to 30 seconds"><i style="width:33%"></i><b style="left:0;width:17%"></b></span><span class="rg">15 to 30 s</span></div>
+<p class="fr">Sole proprietors don't have one; bank-name hint confuses</p>
+<div class="bar"><span class="nm"><b>07</b>Business start</span><span class="tr" role="img" aria-label="Business start: 15 to 25 seconds"><i style="width:28%"></i><b style="left:0;width:17%"></b></span><span class="rg">15 to 25 s</span></div>
+<p class="fr">Two dropdowns, false precision; 3-month rule unsaid</p>
+<div class="bar"><span class="nm"><b>08</b>Ownership</span><span class="tr" role="img" aria-label="Ownership: 8 to 12 seconds"><i style="width:13%"></i><b style="left:0;width:9%"></b></span><span class="rg">8 to 12 s</span></div>
+<p class="fr">51% preselected</p>
+<div class="bar"><span class="nm"><b>09</b>Checking</span><span class="tr" role="img" aria-label="Checking: 3 to 6 seconds"><i style="width:7%"></i><b style="left:0;width:3%"></b></span><span class="rg">3 to 6 s</span></div>
+<p class="fr">Decorative wait with three fake checks</p>
+<div class="bar"><span class="nm"><b>10</b>Home address</span><span class="tr hot" role="img" aria-label="Home address: 35 to 60 seconds"><i style="width:67%"></i><b style="left:0;width:39%"></b></span><span class="rg">35 to 60 s</span></div>
+<p class="fr">Four fields; CA/NY not stopped here</p>
+<div class="bar"><span class="nm"><b>11</b>Date of birth</span><span class="tr" role="img" aria-label="Date of birth: 15 to 25 seconds"><i style="width:28%"></i><b style="left:0;width:17%"></b></span><span class="rg">15 to 25 s</span></div>
+<p class="fr">Fine</p>
+<div class="bar"><span class="nm"><b>12</b>SSN</span><span class="tr hot" role="img" aria-label="SSN: 30 to 90 seconds"><i style="width:100%"></i><b style="left:0;width:33%"></b></span><span class="rg">30 to 90 s</span></div>
+<p class="fr">No cost seen, no next step, "regulated" claim: the exit</p>
+</div>
+<div class="bartot"><span class="nm"><b>Start to SSN</b></span><span style="font-family:Outfit,system-ui,sans-serif;font-weight:700">3.3 to 6 minutes before bank connection</span><span class="rg"></span></div>
+<p class="legend">Screen 01 promises "Take two minutes to submit your basic info". The realistic floor is above three.</p>
 
 <h3>Competitors on the same points</h3>
-<p>Four comparables, chosen for proximity to Fundo's customer and for public evidence: Giggle Finance is the direct competitor; Dave and Brigit are the cash-advance apps gig workers already have on their phones; Bluevine is the small-business line a more established customer graduates to. Application screens were not fetchable for any of them, so the rows rely on their public sites, help centres and third-party reviews.</p>
-<div class="tbl"><table>
+<p>Giggle Finance is the direct competitor; Dave and Brigit are the apps gig workers already have on their phones; Bluevine is where an established customer graduates to. Application screens were not fetchable for any of them, so this is public sites, help centres and third-party reviews.</p>
+<div class="tbl cmpwrap"><table class="cmp">
 <thead><tr><th>Point</th><th>Fundo</th><th>Giggle Finance</th><th>Dave</th><th>Brigit</th><th>Bluevine</th></tr></thead>
 <tbody>
-<tr><td>Cost shown before applying</td><td>No</td><td>No ("no hidden or surprise fees"); 1.15 to 1.7 factor and 7.25% origination via third parties</td><td>Yes: "greater of $5 or 5%", up to $5 monthly, on the home page</td><td>Yes: "$8.99–$15.99 monthly", "$25–$500", "Avg advance $72" on the home page</td><td>Partial: "rates as low as 7.8%", "Additional fees apply."</td></tr>
-<tr><td>Repayment cadence stated</td><td>No ("small automatic bank debits")</td><td>Yes: "We set up weekly payments"</td><td>Partial: "repayable on demand"</td><td>Partial: next payday, free extension</td><td>Yes: weekly or monthly auto-debit</td></tr>
-<tr><td>"Why we ask" copy on sensitive fields</td><td>Screen 05 only</td><td>None</td><td>SSN article in help centre</td><td>None found</td><td>Bank-connection FAQ</td></tr>
-<tr><td>SSN timing</td><td>Screen 12, before bank connection</td><td>Not public; hard pull at offer acceptance</td><td>In sign-up, before bank link</td><td>Not public</td><td>After bank connection, soft pull</td></tr>
-<tr><td>Trust and reviews</td><td>Unsourced 5.0; Trustpilot 3.2, no replies</td><td>Video testimonials; Trustpilot 3.5, no replies</td><td>App-store quotes; Play 4.7 (633K)</td><td>"4.7+ with 971K reviews"; Trustpilot 4.5, replies to 100%</td><td>Trustpilot 4.7 (11.7K), BBB A+, issuing bank named</td></tr>
-<tr><td>States served</td><td>Not CA, NY</td><td>Not NY, CA, OR</td><td>Nationwide</td><td>"Not available in all states"</td><td>Not NV, ND, SD; no sole proprietors</td></tr>
-<tr><td>What they do better</td><td></td><td>Cadence and eligibility numbers on the site; credit-bureau reporting sold as a benefit</td><td>Full fee schedule on the store listing; SSN rationale; no late fees</td><td>Price tiers, range and average advance on the home page; replies to every negative review</td><td>APR floor, cadence, late fee and issuing bank all public</td></tr>
-<tr><td>What they do worse</td><td></td><td>Inconsistent maximums on one page; undisclosed origination fee; "No Credit Requirements" vs hard pull</td><td>Fees only became clear after the FTC suit</td><td>Eligibility rules only in third-party sources</td><td>Excludes sole proprietors, so irrelevant to most gig workers</td></tr>
+<tr><td data-h="Point">Cost shown before applying</td><td data-h="Fundo">No</td><td data-h="Giggle Finance">No. Factor 1.15 to 1.7 and 7.25% origination only via third parties</td><td data-h="Dave">Yes, on the home page: 5% ($5 min), up to $5 a month</td><td data-h="Brigit">Yes, on the home page: $8.99 to $15.99 a month, $25 to $500, average $72</td><td data-h="Bluevine">Partial: "as low as 7.8%", fees unlisted</td></tr>
+<tr><td data-h="Point">Repayment cadence stated</td><td data-h="Fundo">No ("small automatic bank debits")</td><td data-h="Giggle Finance">Yes: "We set up weekly payments"</td><td data-h="Dave">Partial: "repayable on demand"</td><td data-h="Brigit">Partial: next payday, free extension</td><td data-h="Bluevine">Yes: weekly or monthly auto-debit</td></tr>
+<tr><td data-h="Point">"Why we ask" copy on sensitive fields</td><td data-h="Fundo">Screen 05 only</td><td data-h="Giggle Finance">None</td><td data-h="Dave">SSN article in help centre</td><td data-h="Brigit">None found</td><td data-h="Bluevine">Bank-connection FAQ</td></tr>
+<tr><td data-h="Point">SSN timing</td><td data-h="Fundo">Screen 12, before bank connection</td><td data-h="Giggle Finance">Not public; hard pull at offer acceptance</td><td data-h="Dave">In sign-up, before bank link</td><td data-h="Brigit">Not public</td><td data-h="Bluevine">After bank connection, soft pull</td></tr>
+<tr><td data-h="Point">Trust and reviews</td><td data-h="Fundo">Unsourced 5.0; Trustpilot 3.2, no replies</td><td data-h="Giggle Finance">Video testimonials; Trustpilot 3.5, no replies</td><td data-h="Dave">App-store quotes; Play 4.7 (633K)</td><td data-h="Brigit">"4.7+ with 971K reviews"; Trustpilot 4.5, replies to 100%</td><td data-h="Bluevine">Trustpilot 4.7 (11.7K), BBB A+, issuing bank named</td></tr>
+<tr><td data-h="Point">States served</td><td data-h="Fundo">Not CA, NY</td><td data-h="Giggle Finance">Not NY, CA, OR</td><td data-h="Dave">Nationwide</td><td data-h="Brigit">"Not available in all states"</td><td data-h="Bluevine">Not NV, ND, SD; no sole proprietors</td></tr>
+<tr><td data-h="Point">What they do better</td><td data-h="Fundo"></td><td data-h="Giggle Finance">Cadence and eligibility on the site; bureau reporting as a benefit</td><td data-h="Dave">Fee schedule in the store listing; SSN rationale; no late fees</td><td data-h="Brigit">Prices and average advance up front; replies to every negative review</td><td data-h="Bluevine">APR floor, cadence, late fee, issuing bank all public</td></tr>
+<tr><td data-h="Point">What they do worse</td><td data-h="Fundo"></td><td data-h="Giggle Finance">Two maximums on one page; hidden origination fee; hard pull despite "no credit requirements"</td><td data-h="Dave">Fees only became clear after the FTC suit</td><td data-h="Brigit">Eligibility only in third-party sources</td><td data-h="Bluevine">No sole proprietors, so not for most gig workers</td></tr>
 </tbody></table></div>
 <p class="muted">Sources: gigglefinance.com and FAQ, finder.com and nav.com reviews; dave.com, Dave help centre, NerdWallet (Apr 2026); hellobrigit.com, NerdWallet (May 2026); bluevine.com/line-of-credit, Finder (Oct 2026); Trustpilot pages for each. Full list in <a href="#sources">Sources</a>.</p>
 
 <h3>One conversion idea per Apply Now screen</h3>
-<p>Format follows the brief: screen, why people leave (a guess until Part 3 measures it), the idea, the metric that shows it worked, how to test. Ideas that would add unfundable applications or hide cost are excluded on purpose.</p>
-<div class="tbl"><table>
-<thead><tr><th>Screen</th><th>Why people leave (guess)</th><th>Idea</th><th>Metric</th><th>Test</th></tr></thead>
-<tbody>
-<tr><td>01 Email</td><td>No idea what it costs; "advance" for an email feels like a lead trap</td><td>Replace the hero card with a worked example: "Borrow $2,000, repay $X a week for N weeks, $Y total" (numbers from the real pricing table) and a plain eligibility line (3 months, $1,500 a month, not CA or NY). Separate marketing consent into an unchecked box.</td><td>% reaching screen 02; % of starters who are eligible at screen 10</td><td>A/B 50/50, 2 weeks</td></tr>
-<tr><td>02 Mobile</td><td>Fear of calls</td><td>One sentence above the field: "We text a code now and only call if something blocks your funding." Make the account-texts consent a statement, not a checkbox; keep promo texts opt-in.</td><td>% reaching screen 03</td><td>A/B 50/50</td></tr>
-<tr><td>03 + 04 Names</td><td>Two screens for one fact</td><td>Merge into one screen, two fields, autofill-friendly (autocomplete="given-name" and "family-name").</td><td>Time 03 to 05; % reaching 05</td><td>A/B 50/50</td></tr>
-<tr><td>05 Income source</td><td>Wrong people continue; right people doubt</td><td>Keep the pattern. Add an inline note under the third option: "Fundo is for business and 1099 income. If all your income is W-2, we can't fund you yet." Branch W-2-only to a soft exit with the options Fundo already links to.</td><td>Share of SSN submissions later declined for W-2-only income (should fall); % reaching 06 among eligible</td><td>A/B 50/50; guardrail: eligible-start rate must not fall</td></tr>
-<tr><td>06 Business name</td><td>"I don't have one"</td><td>Helper: "No business name? Use your own name, exactly as your bank shows it." Prefill from first and last name with one tap.</td><td>% reaching 07; edits per field</td><td>A/B 50/50</td></tr>
-<tr><td>07 Start date</td><td>False precision, two dropdowns</td><td>Ask the range first with chips ("Less than 3 months, 3 to 12 months, 1 to 3 years, more than 3 years"); if underwriting needs the exact month, ask it only after the range, prefilled by year. If less than 3 months, say so now and offer a reminder for when they qualify.</td><td>% reaching 08; declines for time-in-business after SSN (should fall)</td><td>A/B 50/50</td></tr>
-<tr><td>08 Ownership</td><td>Little friction</td><td>Remove the preselection; add one line on what 50% or less changes (co-owner consent).</td><td>No change expected; watch % reaching 10</td><td>Ship with measurement, no test</td></tr>
-<tr><td>09 Checking</td><td>Theatre</td><td>Make the interstitial real: duplicate-account lookup and a state check from the phone's area code or IP, so a CA or NY visitor is told before the address screen.</td><td>Ineligible-state applicants reaching screen 12 (should go to near zero)</td><td>Ship with measurement</td></tr>
-<tr><td>10 Address</td><td>Four fields; late eligibility surprise</td><td>Google Places autocomplete that fills city, state and ZIP; the moment state is CA or NY, stop with a clear, kind screen (designed in Part 2).</td><td>Time on 10; % reaching 11</td><td>A/B 50/50</td></tr>
-<tr><td>11 Date of birth</td><td>Low</td><td>Use a single text field with input masking (MM/DD/YYYY) and inputmode="numeric".</td><td>Time on 11; validation errors per start</td><td>A/B 50/50</td></tr>
-<tr><td>12 SSN</td><td>Fear, no cost seen, no "what's next"</td><td>Part 2: a cost-and-next-steps screen before the SSN, and the SSN screen rewritten (why, no credit pull, what happens next, who sees it).</td><td>Start-to-SSN conversion; SSN-to-bank-connected</td><td>A/B 50/50, see Part 3</td></tr>
-</tbody></table></div>
+<p>Per screen: why people leave (a guess until Part 3 measures it), the idea, the metric, the test. Ideas that add unfundable applications or hide cost are excluded on purpose.</p>
+<div class="ideas">
+<div class="idea"><div class="ihd"><b>01</b> Email</div><div class="ibody"><p><span>Why they leave</span>No idea what it costs; "advance" for an email feels like a lead trap</p><p><span>Idea</span>Replace the hero card with a worked example and three eligibility lines; move marketing consent to its own unchecked box</p><p><span>Metric</span>% reaching 02; eligible-start rate</p><p><span>Test</span>A/B 50/50, 2 weeks</p></div></div>
+<div class="idea"><div class="ihd"><b>02</b> Mobile</div><div class="ibody"><p><span>Why they leave</span>Fear of calls</p><p><span>Idea</span>One line above the field: "We text a code now and only call if something blocks your funding." Account texts as a statement, promo texts opt-in</p><p><span>Metric</span>% reaching 03</p><p><span>Test</span>A/B 50/50</p></div></div>
+<div class="idea"><div class="ihd"><b>03 + 04</b> Names</div><div class="ibody"><p><span>Why they leave</span>Two screens for one fact</p><p><span>Idea</span>One screen, two fields, autocomplete attributes set</p><p><span>Metric</span>Time 03 to 05; % reaching 05</p><p><span>Test</span>A/B 50/50, after tests 1 to 3</p></div></div>
+<div class="idea"><div class="ihd"><b>05</b> Income source</div><div class="ibody"><p><span>Why they leave</span>Wrong people continue; right people doubt</p><p><span>Idea</span>Keep the pattern; add under the third option: "If all your income is W-2, we can't fund you yet" and branch to a soft exit</p><p><span>Metric</span>Declines for W-2-only after SSN (down); % reaching 06 among eligible</p><p><span>Test</span>A/B 50/50; guardrail on eligible starts</p></div></div>
+<div class="idea"><div class="ihd"><b>06</b> Business name</div><div class="ibody"><p><span>Why they leave</span>"I don't have one"</p><p><span>Idea</span>Helper: "No business name? Use your own name, exactly as your bank shows it", prefilled with one tap</p><p><span>Metric</span>% reaching 07; edits per field</p><p><span>Test</span>Ship and measure (not a priority test)</p></div></div>
+<div class="idea"><div class="ihd"><b>07</b> Start date</div><div class="ibody"><p><span>Why they leave</span>False precision, two dropdowns</p><p><span>Idea</span>Range chips first; exact month only if underwriting needs it; under 3 months told now with a reminder</p><p><span>Metric</span>% reaching 08; time-in-business declines after SSN (down)</p><p><span>Test</span>A/B 50/50</p></div></div>
+<div class="idea"><div class="ihd"><b>08</b> Ownership</div><div class="ibody"><p><span>Why they leave</span>Little</p><p><span>Idea</span>Remove the preselection; one line on what 50% or less changes</p><p><span>Metric</span>Watch % reaching 10</p><p><span>Test</span>Ship, measure</p></div></div>
+<div class="idea"><div class="ihd"><b>09</b> Checking</div><div class="ibody"><p><span>Why they leave</span>Theatre</p><p><span>Idea</span>Make it real: duplicate-account lookup and a state check from area code or IP</p><p><span>Metric</span>Ineligible-state applicants reaching 12 (to near zero)</p><p><span>Test</span>Ship, measure</p></div></div>
+<div class="idea"><div class="ihd"><b>10</b> Address</div><div class="ibody"><p><span>Why they leave</span>Four fields; late surprise</p><p><span>Idea</span>Places autocomplete fills city, state, ZIP; CA or NY stops here with the screen in Part 2</p><p><span>Metric</span>Time on 10; % reaching 11</p><p><span>Test</span>A/B 50/50</p></div></div>
+<div class="idea"><div class="ihd"><b>11</b> Date of birth</div><div class="ibody"><p><span>Why they leave</span>Low</p><p><span>Idea</span>One masked field, numeric keyboard</p><p><span>Metric</span>Time on 11; errors per start</p><p><span>Test</span>Ship and measure</p></div></div>
+<div class="idea"><div class="ihd"><b>12</b> SSN</div><div class="ibody"><p><span>Why they leave</span>Fear, no cost seen, no next step</p><p><span>Idea</span>Part 2: cost and next steps before the SSN; SSN screen rewritten</p><p><span>Metric</span>Start-to-SSN; SSN-to-bank-connected</p><p><span>Test</span>A/B 50/50, Part 3</p></div></div>
+</div>
 
 <h4>Entry points before Apply Now</h4>
-<div class="tbl"><table>
-<thead><tr><th>Surface</th><th>Why people leave</th><th>Idea</th><th>Metric</th><th>Test</th></tr></thead>
-<tbody>
-<tr><td>fundo.com home</td><td>Promises without price; "apply now" in four casings</td><td>One hero: amount range, a worked cost example, three eligibility lines, one "Apply now" that goes to one URL with proper UTM attribution instead of PID=8888.</td><td>Home to Apply Now screen 01 click-through; eligible-start rate</td><td>A/B on the hero only</td></tr>
-<tr><td>Blog post (Airbnb occupancy)</td><td>Four different apply links, CTA baked into an image</td><td>One in-article module after "Where does Fundo fit?": eligibility checklist plus a single tracked link. Make the image CTA a real link or remove it.</td><td>Post to Apply Now click-through, by post</td><td>Ship to all posts, measure by UTM</td></tr>
-<tr><td>Instagram post</td><td>Cannot verify (profile blocked)</td><td>Template with the same three eligibility lines and the cost example, link in bio to a tracked landing page; never "no credit check" alone without the cost line.</td><td>Bio link clicks to screen 01; eligible-start rate from social</td><td>Alternate two templates by week</td></tr>
-</tbody></table></div>
+<div class="ideas">
+<div class="idea"><div class="ihd">fundo.com home</div><div class="ibody"><p><span>Why they leave</span>Promises without price; "apply now" in four casings</p><p><span>Idea</span>One hero: amount range, worked cost example, three eligibility lines, one "Apply now" to one URL with UTM instead of PID=8888</p><p><span>Metric</span>Home to screen 01 click-through; eligible-start rate</p><p><span>Test</span>A/B on the hero only</p></div></div>
+<div class="idea"><div class="ihd">Blog post</div><div class="ibody"><p><span>Why they leave</span>Four apply links, one baked into an image</p><p><span>Idea</span>One in-article module after "Where does Fundo fit?": eligibility checklist and a single tracked link</p><p><span>Metric</span>Post to screen 01 click-through, by post</p><p><span>Test</span>Ship to all posts, measure by UTM</p></div></div>
+<div class="idea"><div class="ihd">Instagram post</div><div class="ibody"><p><span>Why they leave</span>Cannot verify (profile blocked)</p><p><span>Idea</span>Template with the three eligibility lines and the cost example; never "no credit check" alone; bio link to a tracked page</p><p><span>Metric</span>Bio clicks to screen 01; eligible-start rate from social</p><p><span>Test</span>Alternate two templates by week</p></div></div>
+</div>
 
 <h4>What to test first, and why</h4>
-<ol>
-<li><b>Cost before SSN (screen 12 and the new screen before it).</b> Largest expected effect on start-to-SSN and on suitability at once, and it is the regulatory exposure. Part 2 and Part 3 are built around it.</li>
-<li><b>Early eligibility (screens 05, 07, 09, 10).</b> Removes unfundable applications rather than adding them; cheap to build because the rules already exist.</li>
-<li><b>Consent and the first screen (01, 02).</b> Legal hygiene with a probable conversion upside.</li>
-<li><b>Merging screens (03 + 04, 11).</b> Pure speed; test after the first three so the lift is not confused with them.</li>
-</ol>
+<div class="steps3">
+<div><b><span class="n">1</span>Cost before SSN</b>Largest effect on start-to-SSN and suitability at once, and the regulatory exposure. Parts 2 and 3 are built on it.</div>
+<div><b><span class="n">2</span>Early eligibility</b>Screens 05, 07, 09, 10. Removes unfundable applications; cheap because the rules exist.</div>
+<div><b><span class="n">3</span>Consent and screen 01</b>Legal hygiene with a probable conversion upside.</div>
+<div><b><span class="n">4</span>Merged screens</b>03 + 04 and 11. Pure speed; after the first three so the lift is not confused.</div>
+</div>
 <!-- PART 2 -->
 <style>
 /* Phone frames: 360 px, Apply Now visual language */
-.frames{display:flex;flex-wrap:wrap;gap:24px;align-items:flex-start;margin:16px 0 8px}
+.frames{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,360px));gap:24px;align-items:start;justify-content:start;margin:16px 0 8px}
+.frames .frame{width:100%;max-width:360px}
+.ph{width:100%}
+.frame figcaption{font-size:12.5px;line-height:1.45}
 .frame{width:360px;max-width:100%}
-.frame .lbl{font-family:Outfit;font-weight:700;font-size:14px;margin:0 0 8px;color:var(--ink-2)}
+.frame .lbl{font-family:Outfit,system-ui,sans-serif;font-weight:700;font-size:14px;margin:0 0 8px;color:var(--ink-2)}
 .ph{width:360px;max-width:100%;background:#f7f8fb;border:1px solid #e5e7eb;border-radius:20px;overflow:hidden;color:#0a0a0a;font-family:Roboto,system-ui,sans-serif;font-size:15px;line-height:1.45;box-shadow:0 10px 15px -3px rgba(0,0,0,.08)}
 .ph *{box-sizing:border-box}
 .ph .top{display:flex;align-items:center;height:56px;padding:0 12px;background:#fff;border-bottom:1px solid #e5e7eb;position:relative}
 .ph .top .back{width:40px;height:40px;display:flex;align-items:center;justify-content:center;border:0;background:transparent;font-size:20px;color:#0a0a0a}
-.ph .top .logo{position:absolute;left:50%;transform:translateX(-50%);font-family:Outfit;font-weight:700;font-size:22px;color:#0083ff;letter-spacing:-.02em}
+.ph .top .logo{position:absolute;left:50%;transform:translateX(-50%);font-family:Outfit,system-ui,sans-serif;font-weight:700;font-size:22px;color:#0083ff;letter-spacing:-.02em}
 .ph .prog{height:6px;background:#e5e7eb;margin:10px 16px 0;border-radius:999px;overflow:hidden}
 .ph .prog i{display:block;height:100%;background:#00c753;border-radius:999px}
 .ph .steps{font-size:12px;color:#6b7280;margin:6px 16px 0}
 .ph .body{padding:12px 16px 20px}
-.ph h1{font-family:Outfit;font-weight:700;font-size:24px;line-height:1.2;color:#0a0a0a;margin:8px 0 8px}
+.ph .h1{font-family:Outfit,system-ui,sans-serif;font-weight:700;font-size:24px;line-height:1.2;color:#003b8e;margin:8px 0 8px;max-width:none}
 .ph h1 .ac{color:#0083ff}
 .ph p{font-size:14px;color:#334153;margin:0 0 10px;max-width:none}
-.ph .why{background:#eef2ff;border:1px solid #e0e7ff;border-radius:12px;padding:10px 12px;font-size:13px;color:#334153;margin:10px 0 14px}
-.ph .why b{display:block;color:#3730a3;font-weight:500;margin-bottom:2px}
+.ph .why{background:#e8f3ff;border:1px solid #cfe4ff;border-radius:12px;padding:10px 12px;font-size:13px;color:#334153;margin:10px 0 14px}
+.ph .why b{display:block;color:#003b8e;font-weight:500;margin-bottom:2px}
 .ph label{display:block;font-size:13px;font-weight:500;color:#334153;margin:10px 0 6px}
 .ph .in{height:46px;border:1px solid #d1d5db;border-radius:999px;background:#fff;padding:0 14px;display:flex;align-items:center;justify-content:space-between;color:#9ca3af;font-size:15px}
 .ph .in.filled{color:#0a0a0a}
@@ -211,7 +271,7 @@ li{margin-bottom:4px}
 .ph .row>b{flex:1}
 .ph .row:last-child{border-bottom:0}
 .ph .row b{font-weight:500;color:#0a0a0a}
-.ph .big{font-family:Outfit;font-size:28px;font-weight:700;color:#0a0a0a;line-height:1.1}
+.ph .big{font-family:Outfit,system-ui,sans-serif;font-size:28px;font-weight:700;color:#0a0a0a;line-height:1.1}
 .ph .pill{display:inline-block;font-size:12px;padding:3px 10px;border-radius:999px;background:#ffc600;color:#0a0a0a;font-weight:500}
 .ph .pill.ok{background:#e6f9ee;color:#036b2f}
 .ph .pill.gray{background:#eef0f3;color:#334153}
@@ -225,7 +285,7 @@ li{margin-bottom:4px}
 .ph .skel{height:14px;border-radius:7px;background:linear-gradient(90deg,#e5e7eb,#f3f4f6,#e5e7eb);margin:8px 0}
 .ph .toast{background:#0a0a0a;color:#fff;border-radius:12px;padding:10px 12px;font-size:13px;margin:12px 0 0;display:flex;gap:8px;align-items:flex-start}
 .ph .foot{padding:14px 16px;border-top:1px solid #e5e7eb;font-size:12px;color:#6b7280;background:#fff}
-.ph a{color:#0083ff}
+.ph a{color:#003b8e;text-decoration:underline}
 .ph .sr{position:absolute;left:-9999px}
 .ph .check{display:flex;gap:10px;align-items:flex-start;font-size:13px;color:#334153;margin:8px 0}
 .ph .check .bx{flex:0 0 18px;height:18px;border:1.5px solid #9ca3af;border-radius:4px;margin-top:2px;background:#fff}
@@ -236,21 +296,31 @@ li{margin-bottom:4px}
 .ph .mini{font-size:12px;color:#6b7280}
 .before-after{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;margin:8px 0 24px}
 .edge-list li{margin-bottom:8px}
+.tight{margin:0;padding-left:18px;font-size:14px}.tight li{margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0 8px}
+.chips span{font-size:13px;padding:8px 12px;border:1px solid var(--line);border-radius:999px;background:var(--surface);color:var(--ink-2)}
+.week{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;margin:12px 0}
+.week div{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--card);font-size:13.5px;line-height:1.45}
+.week b{display:block;font-family:Outfit,system-ui,sans-serif;color:var(--brand);margin-bottom:4px}
+.choice .card h4{margin-top:4px;font-size:17px}
+.choice .card p{font-size:14px;margin:0}
+.choice .card.pick{border-color:var(--brand);box-shadow:0 0 0 2px rgba(0,131,255,.12)}
 </style>
 
 <h2 id="part2">Part 2 · Improve: the moment before the SSN</h2>
 
 <h3>The choice, against the next two</h3>
-<div class="grid2">
-<div class="card"><p class="eyebrow">Chosen</p><h4 style="margin-top:4px">Screens 11½ and 12: cost and next steps, then the SSN</h4><p>A new screen between date of birth and SSN that shows a worked cost example, the payment cadence, the eligibility rules and the two steps that follow; and the SSN screen rewritten around why it is asked, what is not done with it, and what happens next. It targets the audit's two critical findings at once, it is where the brief's own metric (start-to-SSN) is decided, and it moves Fundo to the right side of the regulatory line without waiting for the marketing site to be rebuilt. I have done this once before: at PPI, Argentina's largest broker, 62% of new users dropped between starting account opening and their first trade. Legal would not let us remove the regulated steps, so we explained them instead, instrumented the flow first and changed one thing at a time behind A/B tests. Account openings rose 20 to 30 percent, concentrated in first-time investors. The same logic applies here: the SSN step stays; what changes is what the customer knows before it.</p></div>
-<div class="card"><p class="eyebrow">Second</p><h4 style="margin-top:4px">Screen 01: the landing and email</h4><p>Highest traffic and the consent problem lives here. Not chosen first because fixing the first screen without fixing the SSN screen moves more people to the point where they still stop, and because the landing page copy depends on legal sign-off on the cost example, which the SSN work forces anyway. It is the next sprint.</p></div>
-<div class="card"><p class="eyebrow">Third</p><h4 style="margin-top:4px">Screens 09 and 10: early eligibility and the state check</h4><p>Removes unfundable applications and is cheap to build. Not chosen because the same eligibility lines are included in the new pre-SSN screen, and the real fix (checking state from the phone's area code at screen 02 or 09) is engineering work with no design surface beyond one decline screen, which is designed below as an edge case.</p></div>
+<div class="grid2 choice">
+<div class="card pick"><p class="eyebrow">Chosen</p><h4>Screens 11½ and 12: cost and next steps, then the SSN</h4><p>A new screen before the SSN with a worked cost example, the cadence, the eligibility rules and what comes next; then the SSN screen rewritten. Fixes the two critical findings at once, on the screen where start-to-SSN is decided, without waiting for the site to be rebuilt.</p></div>
+<div class="card"><p class="eyebrow">Second</p><h4>Screen 01: landing and email</h4><p>Highest traffic and the consent problem. Not first: fixing it sends more people to the SSN screen, where they still stop, and its copy needs the same legal sign-off on cost. Next sprint.</p></div>
+<div class="card"><p class="eyebrow">Third</p><h4>Screens 09 and 10: early eligibility</h4><p>Cheap and removes unfundable applications. Not first: the same eligibility lines are in the new pre-SSN screen, and the real fix (state from area code) is engineering with one decline screen, designed below as an edge case.</p></div>
 </div>
+<p class="muted" style="margin-top:12px">I have done this once before. At PPI, Argentina's largest broker, 62% of new users dropped between starting account opening and their first trade. Legal would not let us remove the regulated steps, so we explained them, instrumented the flow first and changed one thing at a time behind A/B tests. Account openings rose 20 to 30 percent. Same logic here: the SSN step stays; what changes is what the customer knows before it. Yes, this adds a screen to a flow I criticise for having too many: net +1 today, net −2 once 03 + 04 and the date-of-birth fields are merged, which is test #4 in Part 1.</p>
 
-<div class="note"><b>Design language.</b> Kept: Outfit headings, Roboto body, the pill inputs and buttons, the green progress bar, the Fundo blue. Changed on purpose, and said here: the progress bar gets a step count and a text label ("Step 11 of 13"), the cyan headline accent moves to Fundo blue #0083ff (the cyan fails contrast on white), and the chat bubble is moved below the primary button instead of over it. The yellow chip stays as a "need to know" marker. Everything is in finished copy; no placeholders.</div>
+<div class="note"><b>Design language.</b> Kept: Outfit headings, Roboto body, the pill inputs and buttons, the green progress bar, the Fundo blue. Changed on purpose, and said here: the progress bar gets a step count and a text label ("Step 11 of 13"), the cyan headline accent moves to Fundo blue #0083ff (the cyan fails contrast on white), and the chat launcher is taken off the application screens; help lives in the "ask a question" link under the button. The yellow chip stays as a "need to know" marker. Everything is in finished copy; no placeholders.</div>
 
 <h3>Before and after, at 360 px</h3>
-<p>Before is the prototype's screen 12, reproduced word for word. After is two screens. The numbers in the cost example are public figures from third-party reviews of Fundo (a 1.7 factor over 10 weeks, $25 same-day fee); they are placeholders for Fundo's real pricing grid and the design works with any numbers. Legal and compliance review the example before it ships; that is a precondition, not a footnote.</p>
+<p>Before is the prototype's screen 12, reproduced word for word (heading colour matched to the live screen). After is two screens. The numbers in the cost example are the lowest publicly reported Fundo factor (1.7 over 10 weeks, Finder); they are placeholders for Fundo's real pricing grid and the design works with any numbers. The trade-off is explicit: if the real factor is lower, the example only improves; if it is 1.7, this screen will lose some applicants before the bank step, and those are the applicants the brief says Fundo should not want. Legal and compliance sign the example before it ships; that is a precondition, not a footnote.</p>
 
 <div class="frames">
 <div class="frame"><p class="lbl">Before · screen 12 as it is today</p>
@@ -258,7 +328,7 @@ li{margin-bottom:4px}
 <div class="top"><button class="back" aria-label="Back">←</button><span class="logo">Fundo</span></div>
 <div class="prog"><i style="width:58%"></i></div>
 <div class="body">
-<h1>Let's verify your identity — what's your SSN?</h1>
+<p class="h1" role="heading" aria-level="3">Let's verify your identity — what's your SSN?</p>
 <p>As a regulated financial service provider, we're required to collect your SSN to verify your identity.</p>
 <label>Social Security number</label>
 <div class="in"><span>e.g. XXX-XX-XXXX</span><span aria-hidden="true">👁</span></div>
@@ -273,49 +343,44 @@ li{margin-bottom:4px}
 <div class="frame"><p class="lbl">After · new screen 11½: what this costs, what comes next</p>
 <div class="ph" role="group" aria-label="After: cost and next steps screen">
 <div class="top"><button class="back" aria-label="Back">←</button><span class="logo">Fundo</span></div>
-<div class="prog" role="progressbar" aria-valuenow="11" aria-valuemin="1" aria-valuemax="13" aria-label="Application progress"><i style="width:85%"></i></div>
-<div class="steps">Step 11 of 13 · about 2 minutes left</div>
+<div class="prog" role="progressbar" aria-valuenow="12" aria-valuemin="1" aria-valuemax="14" aria-label="Application progress"><i style="width:85%"></i></div>
+<div class="steps">Step 12 of 14 · about 2 minutes left</div>
 <div class="body">
-<h1>Before you share your SSN, here is what an advance costs</h1>
+<p class="h1" role="heading" aria-level="3">Before you share your SSN, here is what an advance costs</p>
 <div class="hero">
 <span class="pill">Example, not your offer</span>
 <div class="big" style="margin-top:8px">$2,000 advance</div>
-<p style="margin:4px 0 0">You repay <b style="color:#fff">$340 a week for 10 weeks</b>. Total paid back: <b style="color:#fff">$3,400</b>. Pay it off early and the total goes down.</p>
+<p style="margin:4px 0 0">You repay <b style="color:#fff">$340 a week for 10 weeks</b>. Total paid back: <b style="color:#fff">$3,400</b>. Pay it off early and you get a discount.</p>
 </div>
 <div class="card">
-<div class="row"><span>Payments</span><b>Automatic, every week, from the bank account you connect</b></div>
-<div class="row"><span>If a payment fails</span><b>We retry and text you first. Missed payments can add fees; we show them before you sign.</b></div>
-<div class="row"><span>Your credit</span><b>We check your identity and your bank activity, not your credit. Your score is not affected.</b></div>
-<div class="row"><span>Not available</span><b>California and New York. W-2-only income.</b></div>
+<div class="row"><span>Payments</span><b>Automatic, weekly, from the bank account you connect</b></div>
+<div class="row"><span>Fees</span><b>Same-day transfer, failed payment and default fees exist; the exact amounts are on your offer before you sign</b></div>
+<div class="row"><span>Your credit</span><b>Identity and bank activity, not your credit score</b></div>
+<div class="row"><span>Not a loan</span><b>Fundo buys a share of your future sales. There is no interest rate, which is why we show the total you pay back</b></div>
+<div class="row"><span>To qualify</span><b>3 months in business, $1,500 a month in deposits. Not in California or New York, not W-2-only</b></div>
 </div>
-<p style="margin-top:12px"><b style="color:#0a0a0a">What happens next</b></p>
-<ol class="tl">
-<li><span class="n now">1</span><span>Your SSN, to confirm it is you (30 seconds)</span></li>
-<li><span class="n">2</span><span>Connect your bank with Plaid (2 minutes, read-only)</span></li>
-<li><span class="n">3</span><span>Your offer: amount, weekly payment and total, before you accept anything</span></li>
-</ol>
+<p style="margin-top:12px;font-size:13px;color:#334153"><b style="color:#0a0a0a">Next:</b> your SSN (30 seconds) → your bank through Plaid (2 minutes) → your offer, with the weekly payment and total shown before you accept anything.</p>
 <div class="btn">I understand, continue →</div>
-<div class="btn ghost">See the full cost table</div>
 </div>
-<div class="foot">Example uses a 1.7 factor over 10 weeks. Your offer depends on your bank activity and is shown before you sign. FAQ · Terms · Privacy</div>
+<div class="foot">Example uses a 1.7 factor over 10 weeks, a publicly reported Fundo rate. Your offer depends on your bank activity and is shown before you sign. <a href="#">Full cost table</a> · FAQ · Terms · Privacy</div>
 </div>
-<figcaption>Figure 2.2. New screen 11½: worked example with weekly payment and total, the four questions every reviewer asks (cadence, failed payment, credit, states), and the three steps left. Primary button restates consent in plain words.</figcaption>
+<figcaption>Figure 2.2. New screen before the SSN: worked example with weekly payment and total, the four answers every applicant needs (cadence, fees, credit, eligibility), and the next three steps in one line. Primary button restates consent in plain words.</figcaption>
 </div>
 
 <div class="frame"><p class="lbl">After · screen 12 rewritten</p>
 <div class="ph" role="group" aria-label="After: SSN screen">
 <div class="top"><button class="back" aria-label="Back">←</button><span class="logo">Fundo</span></div>
-<div class="prog" role="progressbar" aria-valuenow="12" aria-valuemin="1" aria-valuemax="13" aria-label="Application progress"><i style="width:92%"></i></div>
-<div class="steps">Step 12 of 13 · last step before your bank</div>
+<div class="prog" role="progressbar" aria-valuenow="13" aria-valuemin="1" aria-valuemax="14" aria-label="Application progress"><i style="width:92%"></i></div>
+<div class="steps">Step 13 of 14 · last step before your bank</div>
 <div class="body">
-<h1>Confirm it's you with your <span class="ac">Social Security number</span></h1>
+<p class="h1" role="heading" aria-level="3">Confirm it's you with your <span class="ac">Social Security number</span></p>
 <div class="why"><b>Why we ask</b>We match your SSN to your name and date of birth to confirm your identity and prevent fraud. We check your identity, not your credit. This does not affect your score.</div>
 <label for="ssn-after">Social Security number</label>
 <div class="in filled" id="ssn-after"><span>•••-••-6789</span><span style="color:#0083ff;font-size:13px">Show</span></div>
-<p class="help">Encrypted on this device and in transit. Our team never sees it in full.</p>
+<p class="help">Encrypted in transit and stored securely. Shown masked once you enter it.</p>
 <div class="btn">Confirm and connect my bank →</div>
-<div class="lock"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#334153" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Next: a read-only bank connection through Plaid, then your offer with the weekly payment and total shown before you accept.</span></div>
-<p class="mini" style="margin-top:12px">Prefer not to continue? <a href="#">Save and come back later</a> or <a href="#">ask a question</a>. Nothing is submitted until you accept an offer.</p>
+<div class="lock"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#334153" stroke-width="2" aria-hidden="true"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg><span>Next: a secure bank connection through Plaid, then your offer with the weekly payment and total shown before you accept.</span></div>
+<p class="mini" style="margin-top:12px">Prefer not to continue? <a href="#">Save and come back later</a> or <a href="#">ask a question</a>. You can stop at any time. Nothing is funded until you accept an offer.</p>
 </div>
 <div class="foot">FAQ · Terms · Privacy · Esign · Messaging Terms<br>© 2026 Fundo LLC. All rights reserved.</div>
 </div>
@@ -324,19 +389,19 @@ li{margin-bottom:4px}
 </div>
 
 <h3>Edge cases, designed</h3>
-<p>The brief lists seven. Five are drawn below; the other two (slow connection and screen reader) are described as behaviour because they are not a static picture.</p>
+<p>The brief lists seven. Five are drawn below; screen reader and the 360 px viewport are described as behaviour because they are not a picture.</p>
 
 <div class="frames">
 <div class="frame"><p class="lbl">Error · SSN does not match</p>
 <div class="ph" role="group" aria-label="Error state">
 <div class="top"><button class="back" aria-label="Back">←</button><span class="logo">Fundo</span></div>
-<div class="prog" role="progressbar" aria-valuenow="12" aria-valuemin="1" aria-valuemax="13" aria-label="Application progress"><i style="width:92%"></i></div>
-<div class="steps">Step 12 of 13</div>
+<div class="prog" role="progressbar" aria-valuenow="13" aria-valuemin="1" aria-valuemax="14" aria-label="Application progress"><i style="width:92%"></i></div>
+<div class="steps">Step 13 of 14</div>
 <div class="body">
-<h1>Confirm it's you with your <span class="ac">Social Security number</span></h1>
+<p class="h1" role="heading" aria-level="3">Confirm it's you with your <span class="ac">Social Security number</span></p>
 <label for="ssn-err">Social Security number</label>
 <div class="in filled err" id="ssn-err" aria-invalid="true" aria-describedby="ssn-err-msg"><span>•••-••-1234</span><span style="color:#0083ff;font-size:13px">Show</span></div>
-<p class="errmsg" id="ssn-err-msg" role="alert"><span aria-hidden="true">⚠</span><span>This number doesn't match the name and date of birth you entered. Check the digits, or <a href="#">go back to fix your name or birth date</a>.</span></p>
+<p class="errmsg" id="ssn-err-msg" role="alert"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#b42318" stroke-width="2" aria-hidden="true" style="flex:0 0 16px;margin-top:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 8v4M12 16h.01"></path></svg><span>This number doesn't match the name and date of birth you entered. Check the digits, or <a href="#">go back to fix your name or birth date</a>.</span></p>
 <p class="help">Two more tries before we ask you to verify another way.</p>
 <div class="btn">Try again →</div>
 <div class="btn ghost">Verify with a photo ID instead</div>
@@ -350,15 +415,15 @@ li{margin-bottom:4px}
 <div class="top"><span class="logo">Fundo</span></div>
 <div class="body">
 <span class="pill gray">Decision</span>
-<h1>We can't fund you today, and here is why</h1>
+<p class="h1" role="heading" aria-level="3">We can't fund you today, and here is why</p>
 <div class="card">
 <div class="row"><span>What we saw</span><b>Average deposits of $1,120 a month over the last 3 months</b></div>
 <div class="row"><span>What we need</span><b>$1,500 a month for 3 months</b></div>
 </div>
-<p>This decision used your bank activity only. It did not touch your credit score and nothing was reported.</p>
+<p>This decision used your bank activity only. It did not touch your credit score.</p>
 <p><b style="color:#0a0a0a">What you can do</b></p>
 <ol class="tl">
-<li><span class="n">1</span><span>Keep driving or selling; we'll text you once your deposits cross $1,500 a month, if you want.</span></li>
+<li><span class="n">1</span><span>Keep driving or selling, and apply again in 3 months. We can text you a reminder if you want.</span></li>
 <li><span class="n">2</span><span>Connect a different account if most of your income lands elsewhere.</span></li>
 <li><span class="n">3</span><span>Talk to a person: (866) 393-8636, Mon to Fri 9 to 6 ET.</span></li>
 </ol>
@@ -373,10 +438,10 @@ li{margin-bottom:4px}
 <div class="frame"><p class="lbl">Unsupported state · shown at address, not after SSN</p>
 <div class="ph" role="group" aria-label="Unsupported state">
 <div class="top"><button class="back" aria-label="Back">←</button><span class="logo">Fundo</span></div>
-<div class="prog" role="progressbar" aria-valuenow="10" aria-valuemin="1" aria-valuemax="13" aria-label="Application progress"><i style="width:77%"></i></div>
-<div class="steps">Step 10 of 13</div>
+<div class="prog" role="progressbar" aria-valuenow="10" aria-valuemin="1" aria-valuemax="14" aria-label="Application progress"><i style="width:77%"></i></div>
+<div class="steps">Step 10 of 14</div>
 <div class="body">
-<h1>We can't fund businesses in California yet</h1>
+<p class="h1" role="heading" aria-level="3">We can't fund businesses in California yet</p>
 <p>You selected California as your state of residence. Fundo's advances aren't offered there or in New York. We stopped here so you don't share your date of birth or SSN for nothing.</p>
 <div class="card">
 <div class="row"><span>Live somewhere else?</span><b>Go back and fix your state</b></div>
@@ -384,10 +449,10 @@ li{margin-bottom:4px}
 </div>
 <div class="btn sec">Go back and change my state</div>
 <div class="btn ghost">Email me if this changes</div>
-<p class="mini" style="margin-top:12px">We haven't saved your SSN or bank details. Your name and email are deleted in 30 days unless you ask us to keep in touch.</p>
+<p class="mini" style="margin-top:12px">We haven't asked for your SSN or bank details. If you want your name and email removed, <a href="#">tell us here</a>.</p>
 </div>
 </div>
-<figcaption>Figure 2.6. The state rule surfaces the moment the state is chosen (screen 10), with the data promise stated. The same screen serves the W-2-only branch from screen 05 with different copy.</figcaption>
+<figcaption>Figure 2.6. The state rule surfaces the moment the state is chosen (screen 10). The same screen serves the W-2-only branch from screen 05 with the heading "Fundo is for business and 1099 income" and the line "If all your income is W-2, we can't fund you yet. Here are two options that can."</figcaption>
 </div>
 
 <div class="frame"><p class="lbl">Returning customer · recognised at email</p>
@@ -395,8 +460,8 @@ li{margin-bottom:4px}
 <div class="top"><span class="logo">Fundo</span></div>
 <div class="body">
 <span class="pill ok">Welcome back</span>
-<h1>Pick up where you left off, Maria</h1>
-<p>You started an application on Tuesday and got as far as your address. We'll text a code to the number ending 0134 to make sure it's you.</p>
+<p class="h1" role="heading" aria-level="3">Pick up where you left off</p>
+<p>This email has an application in progress. We'll text a code to the phone number on it to make sure it's you, then you continue from your last screen.</p>
 <label for="code-ret">6-digit code</label>
 <div class="in" id="code-ret"><span>000000</span></div>
 <p class="help">Didn't get it? <a href="#">Send again</a> · <a href="#">Use email instead</a></p>
@@ -405,19 +470,19 @@ li{margin-bottom:4px}
 <p class="mini" style="margin-top:12px">Already a customer? Your balance, payments and renewal are in the <a href="#">client portal</a>.</p>
 </div>
 </div>
-<figcaption>Figure 2.7. Returning applicants are recognised at screen 01 and resume after a one-time code; existing customers are pointed to the portal instead of a second application.</figcaption>
+<figcaption>Figure 2.7. Returning applicants are recognised at screen 01 and resume after a one-time code; nothing about the application is shown until the code is right. Existing customers are pointed to the portal instead of a second application.</figcaption>
 </div>
 
 <div class="frame"><p class="lbl">Slow connection · while the SSN is checked</p>
 <div class="ph" role="group" aria-label="Slow connection">
 <div class="top"><span class="logo">Fundo</span></div>
-<div class="prog" role="progressbar" aria-valuenow="12" aria-valuemin="1" aria-valuemax="13" aria-label="Application progress"><i style="width:92%"></i></div>
-<div class="steps">Step 12 of 13</div>
+<div class="prog" role="progressbar" aria-valuenow="13" aria-valuemin="1" aria-valuemax="14" aria-label="Application progress"><i style="width:92%"></i></div>
+<div class="steps">Step 13 of 14</div>
 <div class="body">
-<h1>Checking your identity</h1>
+<p class="h1" role="heading" aria-level="3">Checking your identity</p>
 <p>Usually under 10 seconds.</p>
 <div class="skel" style="width:80%"></div><div class="skel" style="width:60%"></div><div class="skel" style="width:70%"></div>
-<div class="toast" role="status" aria-live="polite"><span aria-hidden="true">⏳</span><span>Your connection is slow. We're still working; keep this screen open or we'll text you a link to continue.</span></div>
+<div class="toast" role="status" aria-live="polite"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" aria-hidden="true" style="flex:0 0 16px;margin-top:2px"><circle cx="12" cy="12" r="9"></circle><path d="M12 7v5l3 2"></path></svg><span>Your connection is slow. We're still working; keep this screen open or we'll text you a link to continue.</span></div>
 <div class="btn sec" style="margin-top:14px">Text me a link instead</div>
 </div>
 </div>
@@ -426,162 +491,202 @@ li{margin-bottom:4px}
 </div>
 
 <h4>The two cases that are behaviour, not pictures</h4>
-<ul class="edge-list">
-<li><b>Screen reader.</b> The progress bar is a <code>role="progressbar"</code> with value and label ("Application progress, step 12 of 13"). Every input has a visible <code>&lt;label&gt;</code>, no placeholder-as-label. The "Why we ask" box precedes the field in reading order. Errors are <code>role="alert"</code> and linked with <code>aria-describedby</code>. The show/hide toggle is a button with <code>aria-pressed</code> and announces "SSN shown" / "SSN hidden". The timeline is an ordered list, so "1 of 3" is read. Target: WCAG 2.2 AA; contrast of every text on these screens is at least 4.5:1 (the cyan accent was the one failure in the current flow).</li>
-<li><b>360 px viewport.</b> All frames above are 360 wide. Headings are 24 px, not 48; nothing is two columns; buttons are full width and 50 px tall; the chat launcher sits below the primary button, never over it.</li>
-</ul>
+<div class="grid2">
+<div class="card"><h4 style="margin-top:0">Screen reader</h4><ul class="tight">
+<li>Progress bar is <code>role="progressbar"</code> with value and label: "step 12 of 13".</li>
+<li>Visible labels on every input; helper and error linked with <code>aria-describedby</code>; errors are <code>role="alert"</code>.</li>
+<li>"Why we ask" precedes the field in reading order; the show/hide toggle announces its state.</li>
+<li>WCAG 2.2 AA; every text on these screens at least 4.5:1, links included (navy, underlined). The cyan accent was the failure in the current flow.</li>
+</ul></div>
+<div class="card"><h4 style="margin-top:0">360 px viewport</h4><ul class="tight">
+<li>All frames above are 360 wide; nothing is two columns.</li>
+<li>Headings 24 px, not 48; buttons full width, 50 px tall.</li>
+<li>No chat launcher on application screens; help is a link under the button.</li>
+<li>Works at 200% zoom and in landscape as a single column.</li>
+</ul></div>
+</div>
 
 <h4>Listed, not designed</h4>
-<ul class="edge-list">
-<li>Offline mid-flow: keep entered values in session storage (never the SSN), show the same toast with "Reconnecting".</li>
-<li>Session timeout after 30 minutes: return to the last screen by email link; SSN re-entry required.</li>
-<li>SSN already attached to another application: treat as returning customer (Figure 2.7), never say "already in use" to a stranger.</li>
-<li>Under 18 from date of birth: stop at screen 11 with a plain message; do not ask for the SSN.</li>
-<li>Name on bank account does not match: handled at bank connection with a one-field confirmation, not a decline.</li>
-<li>Three failed SSN checks: route to photo-ID verification (Figure 2.4 already offers it), then to a person.</li>
-<li>Zoom to 200% and landscape: single column already; the sticky header collapses to the logo only.</li>
-<li>Co-owner (50% or less) path: an extra consent step after the offer, outside this scope.</li>
-</ul>
+<div class="chips">
+<span>Offline mid-flow: values kept in session (never the SSN), "Reconnecting" toast</span>
+<span>Session timeout at 30 min: resume by email link, SSN re-entered</span>
+<span>SSN already on another application: treat as returning, never say "in use"</span>
+<span>Under 18 from date of birth: stop at screen 11, no SSN asked</span>
+<span>Bank name mismatch: one-field confirmation at bank step, not a decline</span>
+<span>Three failed SSN checks: the photo-ID flow Figure 2.4 offers, then a person</span>
+<span>Co-owner (50% or less): consent step after the offer, out of scope</span>
+</div>
 
 <h3>What ships in the first week</h3>
-<p>The app is Next.js, so this is a code change, not a redesign project. Two days of engineering with the specs below, or one day with Claude Code generating the first pass and an engineer reviewing it. I write React and Next.js and shipped a payments app end to end this year (React Native, Supabase, a bank gateway certified in sandbox), so the frames above are written as the markup I would hand over, not as pictures of it.</p>
-<ol>
-<li><b>Day 1, content and rules.</b> Final copy for screens 11½ and 12 and the four edge screens in a single JSON file (the token and copy file in Part 4 holds the keys). Legal signs the cost example and confirms whether identity verification touches a bureau; the copy already says "We check your identity, not your credit. This does not affect your score", which is true whether or not a soft identity check is used, so nothing on screen has to change after the answer.</li>
-<li><b>Day 2 to 3, build.</b> New route for the cost screen; SSN screen rewrite; progress bar component with step label and ARIA; error component with <code>role="alert"</code>; the state check moved to the address screen's onChange. Feature flag <code>pre_ssn_cost</code> at 0% to start.</li>
-<li><b>Day 3, instrumentation.</b> Amplitude events from Part 3 added to both arms before any traffic.</li>
-<li><b>Day 4, QA.</b> 360 px on a real Android, VoiceOver on iOS, throttled 3G, each edge screen reached on purpose.</li>
-<li><b>Day 5, ramp.</b> Flag to 50% for the A/B in Part 3. Rollback is the flag, not a deploy.</li>
-</ol>
-<p>Handed to engineering: the two "after" frames and five edge frames as HTML (they are, above, real markup), the copy JSON, the ARIA notes, the event list. Not handed: anything about pricing logic, which is underwriting's.</p>
+<p>The app is Next.js, so this is a code change behind a flag, not a redesign project. I write React and Next.js and shipped a payments app end to end this year (React Native, Supabase, a bank gateway certified in sandbox), so the frames above are the markup I would hand over, not pictures of it.</p>
+<div class="week">
+<div><b>Day 1</b><span>Copy for 11½, 12 and the four edge screens in one JSON. Legal signs the cost example and confirms whether identity checks touch a bureau; the copy is already true either way.</span></div>
+<div><b>Day 2 to 3</b><span>New route, SSN rewrite, progress bar with ARIA, error component. Flag <code>pre_ssn_cost</code> at 0%. The state check on the address screen gets its own flag and ships after this test reads, so one change is tested at a time.</span></div>
+<div><b>Day 3</b><span>Amplitude events from Part 3 on both arms before any traffic.</span></div>
+<div><b>Day 4</b><span>QA: 360 px Android, VoiceOver, throttled 3G, each edge screen reached on purpose.</span></div>
+<div><b>Day 5</b><span>Flag to 50%. Rollback is the flag, not a deploy.</span></div>
+</div>
+<p class="muted">Handed over: the frames as HTML, the copy JSON, the ARIA notes, the event list. Not handed over: pricing logic, which is underwriting's.</p>
 <!-- PART 3 -->
+<style>
+.steps3{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;margin:12px 0}
+.steps3 div{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--card);font-size:14px}
+.steps3 b{display:block;font-family:Outfit,system-ui,sans-serif;font-size:16px;margin-bottom:6px}
+.steps3 .n{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;align-items:center;justify-content:center;font-size:13px;font-weight:700;margin-right:8px;font-family:Outfit,system-ui,sans-serif}
+.qs{counter-reset:q;list-style:none;padding:0;margin:12px 0}
+.qs li{counter-increment:q;display:grid;grid-template-columns:32px 1fr;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:15px}
+.qs li::before{content:counter(q);font-family:Outfit,system-ui,sans-serif;font-weight:700;color:var(--brand);font-size:18px}
+.funnel{display:flex;flex-direction:column;gap:6px;margin:12px 0}
+.funnel div{display:grid;grid-template-columns:150px 1fr;gap:12px;align-items:center;font-size:14px}
+@media (max-width:640px){.funnel div{grid-template-columns:110px 1fr;font-size:13px}}
+.funnel i{display:block;height:26px;background:#003b8e;border-radius:6px;color:#fff;font-style:normal;font-size:12px;line-height:26px;padding-left:8px;white-space:nowrap}
+.guard{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin:12px 0}
+.guard div{border-left:4px solid var(--warn);background:var(--surface);border-radius:0 10px 10px 0;padding:10px 12px;font-size:13.5px}
+.guard b{display:block;font-family:Outfit,system-ui,sans-serif}
+.ev{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:10px;margin:12px 0}
+.ev div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;background:var(--card)}
+.ev code{font-size:12.5px;color:var(--brand-deep)}
+.ev span{display:block;color:var(--ink-3);margin-top:4px}
+</style>
 <h2 id="part3">Part 3 · Prove it</h2>
-<p>Half a page, as asked. The order is the order I would run it: talk to customers before building, instrument before testing, test with guardrails, decide with a rollback rule written in advance.</p>
+<p>In the order I would run it: talk to customers, instrument, test with guardrails, decide with a rollback rule written before launch.</p>
 
-<h3>Before building: interviews</h3>
-<p><b>Who.</b> Twelve people: six who applied and stopped at or before the SSN screen in the last 30 days (Amplitude can list them; recruit by SMS with a $40 gift card), three who completed and were funded, three who completed and were declined. All on a phone, 25 minutes, remote. Twelve is enough to hear the same reason three times, which is the bar for changing a screen; it is not enough to size anything, and I would not claim it is.</p>
-<p><b>Five questions</b>, asked while they look at their own screen 12 in the prototype:</p>
-<ol>
+<h3>1 · Interviews, before building</h3>
+<div class="steps3">
+<div><b>Who</b>Twelve people from the funnel, recruited by email (SMS only where account texts were agreed) with a $40 gift card: 6 who stopped at or before the SSN in the last 30 days, 3 funded, 3 declined.</div>
+<div><b>How</b>25 minutes, remote, on their phone, looking at their own screen 12 in the prototype.</div>
+<div><b>Why twelve</b>Enough to hear the same reason three times, which is the bar for changing a screen. Not enough to size anything, and I would not claim it is.</div>
+</div>
+<ol class="qs">
 <li>Tell me about the moment you got to the Social Security screen. What went through your head?</li>
 <li>Before that screen, what did you think this would cost you, in dollars per week? Where did that number come from?</li>
 <li>What did you think Fundo would do with your SSN? What were you afraid it might do?</li>
-<li>If you had seen this (show the cost example from Part 2) before the SSN screen, what would you have done differently, if anything?</li>
 <li>What would have made you close the page and never come back?</li>
+<li>Last, and leading on purpose, as concept feedback: if you had seen this (the cost example from Part 2) before the SSN screen, what would you have done differently?</li>
 </ol>
-<p><b>Evidence that would change my mind.</b> If most people who stopped say they stopped because of the <i>amount of information asked</i> rather than because of cost or fear, the right fix is fewer screens (03 + 04, 07, 09), not a cost screen, and Part 2 is re-ranked below that work. If funded customers say the weekly number would have scared them off while they are now happy, that is the suitability trade-off the brief warns about and the example needs to be framed with the renewal and early-payoff discount, not softened.</p>
+<div class="note warn"><b>What would change my mind.</b> If most people who stopped say it was the amount of information asked, not cost or fear, the fix is fewer screens (03 + 04, 07, 09) and Part 2 drops in rank. If funded customers say the weekly number would have scared them off while they are now happy, the example gets framed with the early-payoff discount and the renewal, not softened.</div>
 
-<h3>The experiment</h3>
-<div class="grid2">
-<div class="card"><h4 style="margin-top:0">Hypothesis</h4><p>Showing a worked cost example and the next two steps immediately before the SSN screen, and rewriting the SSN screen around identity rather than regulation, will raise start-to-SSN-submitted conversion by at least 8 percentage points relative, without raising the share of applications that are declined for cost-related reasons after the offer.</p></div>
-<div class="card"><h4 style="margin-top:0">Primary metric</h4><p>Start-to-SSN conversion: applicants who submit a valid SSN divided by applicants who submit an email on screen 01. Secondary: SSN-to-bank-connected, and bank-connected-to-offer-accepted.</p></div>
-<div class="card"><h4 style="margin-top:0">Guardrails</h4><p>Offer-acceptance rate must not fall by more than 2 points (people who see the cost and still accept are the ones we want). Share of SSN submissions from ineligible states or W-2-only income must fall or stay flat. Support contacts per 100 applications must not rise. First-payment failure rate at 30 days, read later, must not rise: more applications that then fail is a loss, not a win.</p></div>
-<div class="card"><h4 style="margin-top:0">Traffic and duration</h4><p>Assumption: about 1,200 application starts a week (a small lender with a 1 to 10 person team; replace with the real number from Amplitude on day one). Baseline start-to-SSN guessed at 35%. To detect an absolute lift of 3 points (35% to 38%) at 80% power and 95% confidence takes about 4,000 starts per arm, so 7 weeks at 50/50. If weekly starts are 3,000, it is 3 weeks. Run whole weeks only: gig income is paid on Fridays and Mondays and the funnel swings with it.</p></div>
+<h3>2 · The experiment</h3>
+<div class="kpi">
+<div><b>+8%</b>relative lift in start-to-SSN, the hypothesis</div>
+<div><b>~4,000</b>starts per arm to detect 3 points at 80% power</div>
+<div><b>7 weeks</b>at 1,200 starts a week, 50/50 (3 weeks at 3,000)</div>
+<div><b>Whole weeks</b>gig income lands Fridays and Mondays</div>
+</div>
+<p><b>Hypothesis.</b> A worked cost example and the next two steps before the SSN, plus an SSN screen about identity rather than regulation, raise start-to-SSN conversion by at least 8% relative without raising cost-related declines after the offer. <b>Primary metric:</b> valid SSN submitted ÷ <i>eligible</i> starts, where eligible means a state and income type that Fundo serves, known at screens 05 and 10 in both arms. Raw start-to-SSN is reported next to it. The treatment screen tells ineligible people to leave before the SSN, so a raw rate would be biased against the design by construction. Secondary: SSN to bank connected, bank connected to offer accepted. Traffic and baseline (35%) are assumptions; Amplitude replaces both on day one.</p>
+<div class="guard">
+<div><b>Offer acceptance</b>must not fall more than 2 points</div>
+<div><b>Ineligible SSNs</b>from CA, NY or W-2-only must fall (expected) and never rise</div>
+<div><b>Support contacts</b>per 100 applications must not rise</div>
+<div><b>First-payment failures</b>at 30 days must not rise: more applications that fail is a loss</div>
 </div>
 
-<h3>Instrumentation (Amplitude, already in use)</h3>
-<p>One event per screen view and per screen completion, with the same property set, so the funnel is a query and not a project:</p>
-<div class="tbl"><table>
-<thead><tr><th>Event</th><th>When</th><th>Properties</th></tr></thead>
-<tbody>
-<tr><td><code>apply_screen_viewed</code></td><td>Screen mounts</td><td>screen_id (01 to 13, incl. 11.5), step_index, variant (control / pre_ssn_cost), device, os, viewport_width, source (utm_source, utm_medium, utm_campaign, partner_id instead of PID in the URL), is_returning, income_type (once known), state (once known)</td></tr>
-<tr><td><code>apply_screen_completed</code></td><td>Continue succeeds</td><td>same, plus time_on_screen_ms, validation_errors_count, field_edits_count</td></tr>
-<tr><td><code>apply_field_error</code></td><td>Inline error shown</td><td>screen_id, field, error_code</td></tr>
-<tr><td><code>apply_cost_table_opened</code></td><td>"See the full cost table" tapped</td><td>screen_id</td></tr>
-<tr><td><code>apply_exit_path</code></td><td>Save for later, ask a question, chat opened, back</td><td>screen_id, path</td></tr>
-<tr><td><code>apply_ssn_submitted</code>, <code>apply_bank_connected</code>, <code>offer_viewed</code>, <code>offer_accepted</code></td><td>Milestones</td><td>variant, and for offer_viewed: factor, term_weeks, weekly_payment_bucket (never the raw SSN or account data)</td></tr>
-<tr><td><code>apply_declined</code></td><td>Decision</td><td>reason_code (state, income_type, revenue, time_in_business, bank_not_supported, identity), screen_id where it was shown</td></tr>
-</tbody></table></div>
-<p><b>Screen timing</b> is time_on_screen_ms from view to completion, reported as median and p90 per screen; the estimates in Part 1 are the first thing this replaces. <b>Drop-off</b> is viewed minus completed per screen, and the funnel from screen 01 to <code>apply_ssn_submitted</code> is the start-to-SSN number. <b>Segmentation</b> is the property list: device and viewport (360 px phones versus larger), source (organic, blog post, Instagram bio link, partner), income_type (business, gig, job), is_returning. <b>Weekly monitoring</b>: one Amplitude dashboard with the funnel by variant, the four guardrails and the decline reasons, reviewed Monday morning; nothing is decided mid-week.</p>
-<p><b>Noise versus real lift.</b> The test is read with Amplitude's experiment analysis (sequential testing on the primary metric), on whole weeks, with the same traffic mix checked by source in both arms; a week where a partner sends a burst of traffic to one arm is excluded and the test extended. A 2-point difference in week two is noise; the decision waits for the sample above.</p>
-<p><b>Tools added, and why.</b> One: session replay (Amplitude's own, or Microsoft Clarity which is free) for the SSN and bank screens only, with input masking on, to see <i>where</i> people hesitate rather than only that they left. Not added: a survey tool (the exit question on "Save and come back later" is one radio field, built in), heatmaps (a one-column form does not need one), a research platform (twelve interviews are recruited from the funnel itself).</p>
-<p><b>Rollback condition.</b> If after the full sample the primary metric is flat or down, or if any guardrail moves the wrong way by more than its threshold at any weekly review, the flag goes to 0% that Monday and the cost example is kept as a link ("See what this costs") on screen 12 while the copy is revised. Flat conversion with a lower cost-related decline rate is a win on suitability and ships anyway; the brief is explicit that volume is not the goal.</p>
-<p class="muted">The discipline comes from practice: at PPI the account-opening results only became readable once we changed one thing at a time behind each test. Whole weeks, one change, written rollback.</p>
+<h3>3 · Instrumentation in Amplitude</h3>
+<p>Two events per screen with one shared property set, so the funnel is a query, not a project. Properties: screen_id, step_index, variant, device, viewport_width, source (UTM and partner_id, replacing the PID in the URL), is_returning, income_type and state once known.</p>
+<div class="ev">
+<div><code>apply_screen_viewed</code> / <code>apply_screen_completed</code><span>plus time_on_screen_ms, validation_errors, field_edits</span></div>
+<div><code>apply_field_error</code><span>screen, field, error_code</span></div>
+<div><code>apply_cost_table_opened</code> · <code>apply_exit_path</code><span>save for later, ask a question, chat, back</span></div>
+<div><code>apply_ssn_submitted</code> · <code>apply_bank_connected</code> · <code>offer_viewed</code> · <code>offer_accepted</code><span>offer carries factor, term and payment bucket, never raw data</span></div>
+<div><code>apply_declined</code><span>reason_code: state, income_type, revenue, time_in_business, bank, identity</span></div>
+</div>
+<div class="funnel" role="img" aria-label="Illustrative funnel, assumed numbers: 1,200 starts, 420 SSNs, 300 bank connections, 210 offers accepted">
+<div><span>Start (email)</span><i style="width:100%">1,200</i></div>
+<div><span>SSN submitted</span><i style="width:35%">420</i></div>
+<div><span>Bank connected</span><i style="width:25%">300</i></div>
+<div><span>Offer accepted</span><i style="width:17.5%">210</i></div>
+</div>
+<p class="muted">Illustrative weekly numbers (1,200 starts assumed). SSN submitted over eligible starts is the primary metric; offer accepted is the first guardrail.</p>
+<div class="grid2">
+<div class="card"><h4 style="margin-top:0">Reading it</h4><ul class="tight">
+<li>Screen timing: median and p90 of time_on_screen_ms. Replaces the estimates in Part 1.</li>
+<li>Drop-off: viewed minus completed per screen; start-to-SSN is the funnel from 01 to <code>apply_ssn_submitted</code>.</li>
+<li>Segments: device and viewport, source, income type, new vs returning.</li>
+<li>Weekly numbers: eligible-start-to-SSN per arm, SSN-to-bank, offer acceptance, declines by reason, support contacts per 100, first-payment failures (lagging). One dashboard, Monday mornings; nothing decided mid-week.</li>
+</ul></div>
+<div class="card"><h4 style="margin-top:0">Noise, tools, rollback</h4><ul class="tight">
+<li>Assignment is sticky per email and device, so someone who saw one arm does not return in the other; the first week is read as novelty and the decision starts from week two. Amplitude's sequential test on the primary metric, whole weeks. Allocation is random, so a partner burst lands in both arms; what gets checked weekly is the source mix per arm, and a week is excluded only if allocation is skewed.</li>
+<li>One tool added: session replay (Amplitude's or Clarity) on the SSN and bank screens, inputs masked. No survey tool, heatmap or research platform.</li>
+<li>Rollback: flat or negative primary, or any guardrail past its threshold at a weekly review, and the flag goes to 0% that Monday. Flat conversion with fewer cost-related declines ships anyway.</li>
+</ul></div>
+</div>
+
 <!-- PART 4 -->
 <style>
 .sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px;margin:12px 0}
-.sw div{border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:12px}
+.sw div{border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:12px;background:var(--card)}
 .sw i{display:block;height:44px}
-.sw b{display:block;padding:6px 8px 0;font-family:Outfit}
+.sw b{display:block;padding:6px 8px 0;font-family:Outfit,system-ui,sans-serif}
 .sw span{display:block;padding:0 8px 8px;color:var(--ink-3)}
 pre{background:#0f1115;color:#e5e7eb;border-radius:12px;padding:14px;overflow:auto;font-size:12.5px;line-height:1.5}
 code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
 .dodont{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:8px 0 16px}
-.dodont div{border-radius:12px;padding:12px 14px;font-size:14px;border:1px solid var(--line)}
+.dodont div{border-radius:12px;padding:12px 14px;font-size:14px;border:1px solid var(--line);background:var(--card)}
 .dodont .do{border-left:4px solid var(--ok)}
 .dodont .dont{border-left:4px solid var(--danger)}
+.type{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;margin:12px 0}
+.type div{border:1px solid var(--line);border-radius:12px;padding:12px;background:var(--card)}
+.type .t{display:block;color:var(--ink);margin-bottom:4px;line-height:1.1}
+.type small{display:block;color:var(--ink-3)}
+.comp{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px;margin:12px 0}
+.comp div{border:1px solid var(--line);border-radius:10px;padding:10px 12px;font-size:13px;background:var(--card)}
+.comp b{display:block;font-family:Outfit,system-ui,sans-serif;margin-bottom:2px}
+.flow{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin:12px 0;align-items:stretch}
+.flow div{border:1px solid var(--line);border-radius:12px;padding:12px;font-size:13px;background:var(--card);position:relative}
+.flow div b{display:block;font-family:Outfit,system-ui,sans-serif;font-size:15px;margin-bottom:4px}
+.flow .src{background:#003b8e;color:#fff;border-color:#003b8e}
+.flow .src b{color:#fff}
+.flow .src span{color:#e5efff}
+details{border:1px solid var(--line);border-radius:12px;padding:10px 14px;margin:10px 0;background:var(--card)}
+summary{cursor:pointer;font-family:Outfit,system-ui,sans-serif;font-weight:700}
 </style>
-<h2 id="part4">Part 4 · One brand, one page: the design system and how it stays alive</h2>
-<p>Start from Apply Now, because it is the one surface that was built with intent. The tokens below were read from the computed styles of the live first screen at app.fundo.com/apply-now (fonts, colours, radii) and from the prototype for the later screens; spacing is observed, not measured from source, and is marked as such. A working token file and a brand-check skill are at the end of this part and in the GitHub repository.</p>
+<h2 id="part4">Part 4 · One brand: the design system and how it stays alive</h2>
+<p>Apply Now is the one surface built with intent, so the system starts there. Fonts, colours and radii were read from the computed styles of the live first screen at app.fundo.com/apply-now; spacing is observed, not read from source. Working files at the end and in the repo.</p>
 
 <h3>Tokens extracted from Apply Now</h3>
-<h4>Colour</h4>
 <div class="sw">
-<div><i style="background:#0083ff"></i><b>brand.blue</b><span>#0083ff · logo, links, accents</span></div>
+<div><i style="background:#0083ff"></i><b>brand.blue</b><span>#0083ff · logo, links</span></div>
 <div><i style="background:#003b8e"></i><b>brand.navy</b><span>#003b8e · primary button</span></div>
-<div><i style="background:#00b9da"></i><b>accent.cyan</b><span>#00b9da · headline accent (fails AA on white, 2.6:1; use on dark only)</span></div>
-<div><i style="background:#00c753"></i><b>status.success</b><span>#00c753 · progress bar, checks</span></div>
-<div><i style="background:#ffc600"></i><b>status.attention</b><span>#ffc600 · "need to know" chip</span></div>
-<div><i style="background:#d92d20"></i><b>status.error</b><span>#d92d20 · added; the flow has no error colour today</span></div>
-<div><i style="background:#0a0a0a"></i><b>ink.primary</b><span>#0a0a0a · headings, body</span></div>
-<div><i style="background:#334153"></i><b>ink.secondary</b><span>#334153 · labels, support copy</span></div>
+<div><i style="background:#00b9da"></i><b>accent.cyan</b><span>#00b9da · 2.6:1 on white; dark backgrounds only</span></div>
+<div><i style="background:#00c753"></i><b>status.success</b><span>#00c753 · progress, checks</span></div>
+<div><i style="background:#ffc600"></i><b>status.attention</b><span>#ffc600 · "read this" chip</span></div>
+<div><i style="background:#d92d20"></i><b>status.error</b><span>#d92d20 · added; none existed</span></div>
+<div><i style="background:#e8f3ff;border-bottom:1px solid #e5e7eb"></i><b>callout.bg</b><span>#e8f3ff · added; "why we ask" boxes</span></div>
+<div><i style="background:#8a9bd4"></i><b>action.disabled</b><span>#8a9bd4 · observed on disabled buttons</span></div>
+<div><i style="background:#0a0a0a"></i><b>ink.primary</b><span>#0a0a0a</span></div>
+<div><i style="background:#334153"></i><b>ink.secondary</b><span>#334153 · labels</span></div>
 <div><i style="background:#6b7280"></i><b>ink.tertiary</b><span>#6b7280 · helper, legal</span></div>
-<div><i style="background:#e5e7eb"></i><b>line.default</b><span>#e5e7eb · borders, progress track</span></div>
-<div><i style="background:#f7f8fb;border-bottom:1px solid #e5e7eb"></i><b>surface.page</b><span>#f7f8fb · screen background</span></div>
-<div><i style="background:#ffffff;border-bottom:1px solid #e5e7eb"></i><b>surface.card</b><span>#ffffff · cards, header</span></div>
+<div><i style="background:#e5e7eb"></i><b>line.default</b><span>#e5e7eb</span></div>
+<div><i style="background:#f7f8fb;border-bottom:1px solid #e5e7eb"></i><b>surface.page</b><span>#f7f8fb</span></div>
+<div><i style="background:#ffffff;border-bottom:1px solid #e5e7eb"></i><b>surface.card</b><span>#ffffff</span></div>
 </div>
-<p class="muted">Five hues (blue, navy, cyan, green, yellow) is one or two more than a financial brand needs. The system keeps them but assigns each a single job, which is how the drift stops: cyan never carries text on white again, green means progress and success only, yellow means "read this before you continue".</p>
+<p class="muted">Working examples: <code>tokens.json</code>, <code>copy.json</code>, the brand-check skill and the drift script are in the repository; the first and third are reproduced at the end of this part. Five hues is one or two more than a financial brand needs. The system keeps them and gives each one job: cyan never carries text on white again, green means progress and success only, yellow means "read this before you continue".</p>
 
-<h4>Typography</h4>
-<div class="tbl"><table>
-<thead><tr><th>Token</th><th>Value (observed)</th><th>Use</th></tr></thead>
-<tbody>
-<tr><td>font.display</td><td>Outfit 700</td><td>Headings, numbers that matter (the weekly payment)</td></tr>
-<tr><td>font.body</td><td>Roboto 400 / 500</td><td>Everything else. The FAQ accordion on screen 01 falls back to the system sans; that is drift, and the first thing the check below catches</td></tr>
-<tr><td>type.h1</td><td>48/48 desktop, 24/29 mobile (set by the system; the prototype keeps 48 on phones)</td><td>One per screen</td></tr>
-<tr><td>type.h2</td><td>24/32</td><td>Card titles, section heads</td></tr>
-<tr><td>type.h3</td><td>18/28</td><td>Form section titles ("First, enter your email")</td></tr>
-<tr><td>type.body</td><td>16/24</td><td>Paragraphs, choice cards</td></tr>
-<tr><td>type.label</td><td>14/16, weight 500, ink.secondary</td><td>Field labels, always visible, never a placeholder</td></tr>
-<tr><td>type.helper</td><td>13/18, ink.tertiary</td><td>Helper and error text (error in status.error)</td></tr>
-<tr><td>type.legal</td><td>12/18, ink.tertiary</td><td>Consent, footer. Never below 12</td></tr>
-</tbody></table></div>
+<div class="type">
+<div><span class="t" style="font-family:Outfit,system-ui,sans-serif;font-weight:700;font-size:24px">Outfit 700</span><small>font.display · headings and the numbers that matter · h1 24/29 on phones, h2 24/32, h3 18/28</small></div>
+<div><span class="t" style="font-family:Roboto;font-size:16px">Roboto 400 / 500</span><small>font.body · body 16/24 · label 14 w500 · helper 13 · legal 12, never below</small></div>
+<div><span class="t" style="font-size:14px"><span style="display:inline-block;width:120px;height:30px;border:1px solid #d1d5db;border-radius:999px;vertical-align:middle"></span></span><small>radius.pill 9999 · inputs 46 px, buttons 50 px, chips · radius.card 16, hero 24, callout 12</small></div>
+<div><span class="t" style="font-size:14px"><span style="display:inline-block;width:4px;height:16px;background:#003b8e;margin-right:4px"></span><span style="display:inline-block;width:8px;height:16px;background:#003b8e;margin-right:4px"></span><span style="display:inline-block;width:16px;height:16px;background:#003b8e;margin-right:4px"></span><span style="display:inline-block;width:24px;height:16px;background:#003b8e"></span></span><small>space 4, 8, 12, 16, 24, 32, 48, 64 (Tailwind scale, observed) · gutters 16 on phones</small></div>
+</div>
+<p class="muted">Drift found while extracting: the FAQ accordion on screen 01 falls back to the system font. The check below catches exactly that.</p>
 
-<h4>Spacing and radius</h4>
-<div class="tbl"><table>
-<thead><tr><th>Token</th><th>Value</th><th>Use</th></tr></thead>
-<tbody>
-<tr><td>space.1 to space.8</td><td>4, 8, 12, 16, 24, 32, 48, 64 (Tailwind scale, observed)</td><td>Gutters 16 on phones, card padding 16 to 24, 24 between sections</td></tr>
-<tr><td>radius.pill</td><td>9999</td><td>Inputs (46 px tall), buttons (50 px), chips</td></tr>
-<tr><td>radius.card</td><td>16 (prototype) / 24 (hero card on screen 01)</td><td>Cards; the system picks 16 and reserves 24 for the one hero</td></tr>
-<tr><td>radius.callout</td><td>10 to 12</td><td>"Why we ask" box, toasts</td></tr>
-<tr><td>shadow.card</td><td>0 10px 15px -3px rgba(0,0,0,.1), 0 4px 6px -4px rgba(0,0,0,.1)</td><td>Cards on page surface only</td></tr>
-</tbody></table></div>
-
-<h3>Beyond tokens: the parts that make it a system</h3>
-<div class="grid2">
-<div class="card"><h4 style="margin-top:0">Components (the first ten)</h4><ul>
-<li>Button: primary, secondary, ghost; rest, hover, pressed, focus, disabled, loading. Label states the outcome ("Confirm and connect my bank"), never "Submit".</li>
-<li>Text input: visible label, helper, error with <code>role="alert"</code>, masked variant for SSN with show toggle, autocomplete attributes set.</li>
-<li>Choice card (screens 05, 08): radio semantics, chips for examples, no preselection on eligibility answers.</li>
-<li>Progress bar: step index, total, text label, <code>role="progressbar"</code>.</li>
-<li>Why-we-ask callout: one per sensitive field, two sentences max.</li>
-<li>Cost example card: amount, cadence, total, early-payoff line, "example" chip. Numbers come from a pricing table, never typed into copy.</li>
-<li>Timeline (what happens next): numbered, current step emphasised.</li>
-<li>Decision screen template: decision, the number that decided it, the threshold, what was not done, three next steps.</li>
-<li>Toast / status: polite live region for slow connection and saves.</li>
-<li>Footer: links, badges, one copyright string, one address.</li>
-</ul></div>
-<div class="card"><h4 style="margin-top:0">Voice and tone</h4>
-<p>Plain, specific, calm. Fundo talks to someone who drives for a living and is deciding whether to trust a company with their bank account. The rules:</p>
-<ul>
-<li>Say the number. "$340 a week for 10 weeks" beats "small automatic debits".</li>
-<li>Say what we do with it. Every sensitive field gets a why.</li>
-<li>Say what is next. Every primary button names the next step.</li>
-<li>Never promise speed without the condition ("same business day if approved before 3 PM ET").</li>
-<li>No exclamation marks in forms. No "Don't worry". No "Everyone loves us".</li>
-<li>One product name everywhere. The recommendation is "advance", the word the button already uses; legal decides between "merchant cash advance" and "revenue-based financing" for the contract and the site follows.</li>
-</ul></div>
+<h3>Beyond tokens</h3>
+<h4>Ten components, listed with their states</h4>
+<div class="comp">
+<div><b>Button</b>primary, secondary, ghost · rest, hover, pressed, focus, disabled, loading · label names the outcome</div>
+<div><b>Text input</b>visible label, helper, error with <code>role="alert"</code>, masked variant with show toggle</div>
+<div><b>Choice card</b>radio semantics, example chips, no preselected eligibility answers</div>
+<div><b>Progress bar</b>step index, total, text label, <code>role="progressbar"</code></div>
+<div><b>Why-we-ask callout</b>one per sensitive field, two sentences max</div>
+<div><b>Cost example card</b>amount, cadence, total, early payoff, "example" chip; numbers from a pricing table</div>
+<div><b>Timeline</b>what happens next, current step emphasised</div>
+<div><b>Decision screen</b>decision, the number, the threshold, what was not done, three next steps</div>
+<div><b>Toast / status</b>polite live region for slow connection and saves</div>
+<div><b>Footer</b>links, badges, one copyright, one address</div>
 </div>
 
+<h4>Voice and tone</h4>
+<p>Plain, specific, calm. Fundo talks to someone who drives for a living and is deciding whether to trust a company with their bank account. Say the number. Say what we do with it. Say what is next. Never promise speed without the condition. One product name everywhere ("advance", the word the button already uses; legal picks the contract term and the site follows).</p>
 <div class="dodont">
 <div class="do"><b>Write</b><br>"We check your identity, not your credit. This does not affect your score."</div>
 <div class="dont"><b>Not</b><br>"Don't worry, this won't hurt your credit score"</div>
@@ -592,54 +697,44 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
 </div>
 
 <div class="grid2">
-<div class="card"><h4 style="margin-top:0">Financial-content patterns</h4><ul>
-<li>Cost is never shown without cadence and total: amount, payment, frequency, term, total, and what early payoff changes.</li>
-<li>"No credit check" never appears alone; it is always "identity, not credit, score not affected".</li>
-<li>Eligibility is a triplet shown before any personal data: time in business, monthly revenue, states not served (plus income type).</li>
-<li>A decline always carries the number, the threshold and a next step.</li>
-<li>Fees that can occur later (failed payment, same-day transfer, default) are listed before signing, in the same table as the price.</li>
-<li>Every claim that touches regulation ("regulated", "not a loan", "no personal guarantee") has a legal owner and a review date in the content file.</li>
+<div class="card"><h4 style="margin-top:0">Financial-content patterns</h4><ul class="tight">
+<li>Cost never without cadence and total.</li>
+<li>"No credit check" never alone: identity, not credit, score untouched.</li>
+<li>Eligibility triplet before any personal data: time in business, revenue, states.</li>
+<li>Every decline carries the number, the threshold, a next step.</li>
+<li>Later fees (failed payment, same-day, default) in the same table as the price.</li>
+<li>Every regulatory claim has a legal owner and a review date.</li>
 </ul></div>
-<div class="card"><h4 style="margin-top:0">Accessibility rules</h4><ul>
-<li>WCAG 2.2 AA. Text contrast 4.5:1; cyan is banned on white.</li>
-<li>Visible labels, no placeholder-as-label, helper linked by <code>aria-describedby</code>.</li>
-<li>Touch targets 44 px minimum; buttons 50 px; nothing floats over a primary button.</li>
-<li>One H1 per screen, 24 px on phones; headings in order.</li>
-<li>Errors announced, focus moved to the first error, colour never the only signal.</li>
-<li>Works at 360 px and at 200% zoom in a single column.</li>
-<li>Images: alt text that says what the image says, or empty alt if decorative; no text baked into images (the blog's "Apply Now!").</li>
+<div class="card"><h4 style="margin-top:0">Accessibility rules</h4><ul class="tight">
+<li>WCAG 2.2 AA; 4.5:1 text; cyan banned on white.</li>
+<li>Visible labels; no placeholder-as-label.</li>
+<li>44 px targets; nothing over a primary button.</li>
+<li>One h1 per screen, 24 px on phones.</li>
+<li>Errors announced, focus moved, colour never the only signal.</li>
+<li>Alt text that says what the image says; no text baked into images.</li>
 </ul></div>
 </div>
 
-<h3>How the system reaches every surface</h3>
-<div class="tbl"><table>
-<thead><tr><th>Surface</th><th>How tokens arrive</th><th>What is specific</th></tr></thead>
-<tbody>
-<tr><td>Apply Now and portal (React, Next.js)</td><td><code>tokens.json</code> is the source. A build step writes <code>tokens.css</code> (custom properties) and the Tailwind theme, so <code>bg-brand-navy</code> and <code>var(--color-brand-navy)</code> are the same value. Components live in one package used by both apps.</td><td>Copy lives in <code>copy.json</code> keyed by screen and field, so the words are versioned like the colours.</td></tr>
-<tr><td>Marketing site and blog (WordPress)</td><td>The same build writes <code>theme.json</code> (colours, font families, sizes, spacing) for the block editor and a small CSS file for the theme. Outfit and Roboto are loaded from Google Fonts on both sides so headings match the app.</td><td>Three block patterns: hero with cost example, eligibility triplet, single "Apply now" button with UTM. One apply URL, no PID in the href.</td></tr>
-<tr><td>Email (HTML, SendGrid)</td><td>Tokens compiled into inline styles through MJML templates; fonts fall back to Arial (Outfit does not render in most inboxes) with the same sizes and colours; buttons are bulletproof table buttons in brand.navy.</td><td>Templates: application saved, code, offer ready, payment reminder, payment failed, decline. Each starts with the number that matters.</td></tr>
-<tr><td>Social (Instagram, Facebook, LinkedIn)</td><td>A Figma template file with the colour and type styles bound to the same token names; 1080 square and 1080 by 1350 formats; every post uses the eligibility triplet or the cost example, never "no credit check" alone.</td><td>Captions follow the voice rules; the link in bio goes to a tracked landing page.</td></tr>
-<tr><td>Internal admin tool</td><td>Same React package as the portal; the decision-screen template is also the underwriter's view, so the customer and the underwriter read the same number.</td><td>Density: a compact variant of inputs and tables, same tokens.</td></tr>
-</tbody></table></div>
+<h3>One source, every surface</h3>
+<div class="flow">
+<div class="src"><b>tokens.json + copy.json</b><span>The source. Versioned like code.</span></div>
+<div><b>React / Next.js</b>Build writes <code>tokens.css</code> and the Tailwind theme; one component package for Apply Now, portal and admin.</div>
+<div><b>WordPress</b>Same build writes <code>theme.json</code>; three block patterns: cost hero, eligibility triplet, one apply button with UTM.</div>
+<div><b>Email (SendGrid)</b>MJML templates with inline styles; Arial fallback; table buttons in navy. Each starts with the number that matters.</div>
+<div><b>Social</b>Figma template bound to the same token names; eligibility triplet or cost example on every post.</div>
+<div><b>Internal admin</b>Same React package; the decision screen is also the underwriter's view, so both read the same number.</div>
+</div>
 
-<h3>Claude in the loop</h3>
-<p>Three jobs, three tools, and a rule: the assistant produces, a person decides, and a script checks.</p>
-<ul>
-<li><b>Generate.</b> Claude Design builds new screens, emails and posts from <code>tokens.json</code>, <code>copy.json</code> and the component list, so a first draft of a new email takes minutes and is already on-brand. Claude Code scaffolds the component in the shared package and the MJML template from the same file.</li>
-<li><b>Check.</b> A Claude skill, <code>fundo-brand-check</code> (below), reviews any screenshot, HTML or copy against the tokens, the voice rules and the financial-content patterns, and returns a list of violations with the rule each one breaks. It runs in the pull request and on request in chat ("check this Instagram post").</li>
-<li><b>Measure drift.</b> A script in CI counts, on every commit, hex and rgba literals, font-family declarations and radius values outside the token file, per surface, and writes the numbers to a file the system's documentation page reads. I run exactly this on my own site: the audit found 97 hardcoded colours against 96 token references on day one; today it is 3 against 252, and the table on the page updates itself on every commit. Drift shows up as a diff, not as a feeling six months later.</li>
-</ul>
-
-<h3>Keeping it alive</h3>
+<h3>Claude in the loop, and keeping it alive</h3>
 <div class="grid2">
-<div class="card"><h4 style="margin-top:0">Owners</h4><p>The UX lead owns tokens, components, copy and the checks. Engineering owns the build step and the package release. Legal owns the lines flagged in the content file and reviews them on a date, not on a request. Marketing owns the WordPress patterns and social templates but cannot add a colour or a font: they ask, and the answer is a token or a no.</p></div>
-<div class="card"><h4 style="margin-top:0">Change process</h4><p>A change is a pull request to the tokens repository: what changes, why, screenshots from the brand check. Patch for a value, minor for a new component, major for a renamed token. Every surface consumes a version, so the site can lag the app by one release without breaking.</p></div>
-<div class="card"><h4 style="margin-top:0">Drift detection</h4><p>Weekly: the CI numbers per surface and the brand-check findings on new pages, in one message to the team. Quarterly: a walk of every surface on a phone like Part 1, half a day, with the issues ranked the same way. The first quarterly review is this document.</p></div>
+<div class="card"><h4 style="margin-top:0">Generate</h4><p style="font-size:14px;margin:0">Claude Design drafts screens, emails and posts from <code>tokens.json</code>, <code>copy.json</code> and the component list. Claude Code scaffolds the component and the MJML template from the same file.</p></div>
+<div class="card"><h4 style="margin-top:0">Check</h4><p style="font-size:14px;margin:0">The <code>fundo-brand-check</code> skill reviews any screenshot, HTML or copy against tokens, voice and financial patterns, with block / fix / note severities. Runs in the pull request and in chat.</p></div>
+<div class="card"><h4 style="margin-top:0">Measure drift</h4><p style="font-size:14px;margin:0">A CI script (<code>scripts/drift.sh</code> in the repo) counts hex, rgba, font-family and radius literals outside the token file, per surface, on every commit. I run the same idea on my own site: 97 hardcoded colours against 96 token references on day one, 3 against 252 today, and the page reports itself.</p></div>
+<div class="card"><h4 style="margin-top:0">Owners and change</h4><p style="font-size:14px;margin:0">UX lead owns tokens, components, copy and checks; engineering the build and release; legal the flagged lines on a date; marketing the patterns, but cannot add a colour or font. A change is a PR to the tokens repo, semver, each surface pins a version. Weekly drift message, quarterly phone walk like Part 1. This document is the first one.</p></div>
 </div>
 
 <h3>Working examples</h3>
-<p>Both files are in the repository and reproduced here so a reviewer, human or Claude, can read them without downloading anything.</p>
-<h4><code>tokens.json</code> (W3C design-tokens format, extracted values)</h4>
+<details><summary>tokens.json (W3C design-tokens format, extracted values)</summary>
 <pre><code>{
   "$schema": "https://design-tokens.github.io/community-group/format/",
   "color": {
@@ -648,7 +743,10 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
     "accent":  { "cyan":  { "$value": "#00b9da", "$type": "color", "$description": "Dark backgrounds only; 2.6:1 on white" } },
     "status":  { "success":   { "$value": "#00c753", "$type": "color" },
                  "attention": { "$value": "#ffc600", "$type": "color" },
-                 "error":     { "$value": "#d92d20", "$type": "color" } },
+                 "error":     { "$value": "#d92d20", "$type": "color" },
+                 "errorText": { "$value": "#b42318", "$type": "color" } },
+    "callout": { "bg": { "$value": "#e8f3ff", "$type": "color" }, "border": { "$value": "#cfe4ff", "$type": "color" } },
+    "action":  { "disabled": { "$value": "#8a9bd4", "$type": "color" } },
     "ink":     { "primary":   { "$value": "#0a0a0a", "$type": "color" },
                  "secondary": { "$value": "#334153", "$type": "color" },
                  "tertiary":  { "$value": "#6b7280", "$type": "color" } },
@@ -681,9 +779,8 @@ code{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.92em}
     "progress": { "fill": { "$value": "{color.status.success}", "$type": "color" }, "track": { "$value": "{color.line.default}", "$type": "color" } },
     "callout": { "attention": { "$value": "{color.status.attention}", "$type": "color" } }
   }
-}</code></pre>
-
-<h4><code>fundo-brand-check</code>, a Claude skill (SKILL.md, abridged)</h4>
+}</code></pre></details>
+<details><summary>fundo-brand-check, a Claude skill (SKILL.md)</summary>
 <pre><code>---
 name: fundo-brand-check
 description: Review a Fundo screen, email, page or social post against the brand tokens, voice rules and financial-content patterns. Use before any customer-facing change ships.
@@ -696,78 +793,91 @@ Check, in this order, and report each finding as: location, rule broken, severit
 4. Voice: exclamation marks in forms, "Don't worry", unsourced ratings, more than one product name in one surface: "fix".
 5. Copy consistency: any string that differs from copy.json for the same key: "fix", quote both.
 End with the three findings to fix first and a one-line verdict: ship / fix first / do not ship.
-Never rewrite the work yourself unless asked; list what to change.</code></pre>
+Never rewrite the work yourself unless asked; list what to change.</code></pre></details>
 <!-- AI -->
+<style>
+.split{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:12px 0}
+.split div{border:1px solid var(--line);border-radius:12px;padding:14px;background:var(--card);font-size:14px}
+.split b{display:block;font-family:Outfit,system-ui,sans-serif;font-size:16px;margin-bottom:6px}
+.split ul{margin:0;padding-left:18px}
+.split li{margin-bottom:5px}
+.err{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:10px;margin:12px 0}
+.err div{border-left:4px solid var(--danger);background:var(--surface);border-radius:0 10px 10px 0;padding:10px 12px;font-size:13.5px}
+.err b{display:block;font-family:Outfit,system-ui,sans-serif;margin-bottom:2px}
+.err span{display:block;color:var(--ink-2);margin-top:4px}
+</style>
 <h2 id="ai">How I worked, and what the tools got wrong</h2>
-<p>This was done in one sitting with Claude (Cowork session with browser, shell and file access), the way I work day to day. The division of labour, honestly: I set the plan, framed the critical findings from what I know of regulated onboarding (PPI's account opening under CNV rules, banking flows at Veritran), chose the flow, approved every ranking and every line of copy, and reviewed each part before the next one started. Claude ran the public-surface research in parallel, read the prototype screen by screen, wrote first drafts of the four parts and the HTML frames, and rebuilt them after my corrections. Nothing in this document was published without my reading it; several things were changed because I read it.</p>
+<p>One sitting, in a Claude session with browser, shell and file access, the way I work every day. The split, honestly:</p>
+<div class="split">
+<div><b>Me</b><ul>
+<li>Set the plan and the time budget per part.</li>
+<li>Framed the critical findings from regulated onboarding I have shipped (PPI under CNV rules, banking flows at Veritran).</li>
+<li>Chose the flow to redesign, the severity of every issue, the cost example and its framing.</li>
+<li>Read and approved every line of copy; sent back what did not sound like me or was not true.</li>
+<li>Decided how the whole thing is presented.</li>
+</ul></div>
+<div><b>Claude</b><ul>
+<li>Three research agents in parallel: the brief, every public Fundo surface plus reviews and legal pages, four competitors and the 2025 to 2026 disclosure laws. About 25 minutes.</li>
+<li>Read the prototype screen by screen in Chrome and the computed styles of the live first screen, without typing into it.</li>
+<li>First drafts of the four parts and the 360 px frames in HTML; rebuilt after each round of my corrections.</li>
+<li>Shell work: lab() to hex, sample size, rendering the frames to check them, assembling this page.</li>
+</ul></div>
+</div>
 
-<h3>Tools and what each did</h3>
-<ul>
-<li><b>Claude (research agents, three in parallel).</b> One fetched the full brief; one walked fundo.com, the blog, the portal, the legal pages, Trustpilot, BBB and the CFPB complaint summaries; one compared Giggle Finance, Dave, Brigit and Bluevine and summarised the 2025 to 2026 disclosure laws. About 25 minutes of wall time for what would have been three hours by hand.</li>
-<li><b>Claude in Chrome.</b> Opened the Apply Now prototype at phone width and captured all 12 screens; read the computed styles of the live first screen at app.fundo.com/apply-now (fonts, colours, radii) without typing anything into it.</li>
-<li><b>Claude Code (shell).</b> Converted CSS <code>lab()</code> colours to hex, assembled this page from parts, rendered the 360 px frames with Playwright to check them, computed the A/B sample size.</li>
-<li><b>Claude artifacts.</b> This page, republished after each part so I could review it on a phone as the reviewers will.</li>
-</ul>
-
-<h3>Real prompts (abridged, verbatim where it matters)</h3>
-<pre><code># Research brief given to the surface-audit agent
-"Fetch and report on these surfaces, as raw and complete as possible (verbatim headings, CTAs,
+<h3>Real prompts, abridged</h3>
+<details><summary>Research brief to the surface-audit agent</summary><pre class="wrap"><code>"Fetch and report on these surfaces, as raw and complete as possible (verbatim headings, CTAs,
 claims, numbers, disclaimers, footers; I need exact wording for an audit) ... Do NOT submit any
-form on fundo.com or app.fundo.com. Public information only. ... Also fetch any
-pricing/how-it-works/FAQ/terms page and report how cost is explained: factor rate, fees,
-repayment frequency (daily/weekly), total payback example, consequences of failed payments,
+form on fundo.com or app.fundo.com. Public information only. ... report how cost is explained:
+factor rate, fees, repayment frequency, total payback example, consequences of failed payments,
 states not served, time to funding. ... Search for Fundo reviews (Trustpilot, BBB, Google) and
-report the 3 to 5 most common complaints and praises with source links."
-
-# Competitor agent
-"Compare these competitors on the SAME points, public surfaces only ... (a) how the application
+report the 3 to 5 most common complaints and praises with source links."</code></pre></details>
+<details><summary>Competitor agent</summary><pre class="wrap"><code>"Compare these competitors on the SAME points, public surfaces only ... (a) how the application
 starts ... whether they explain WHY each sensitive field is needed, when SSN and bank connection
 happen ... (b) financial clarity: is cost shown before applying ... Give exact short quotes and
-source URLs for every claim."
-
-# Direction from me, in Spanish, before Part 2 (translated)
-"Go with the SSN screen and the moment before it; the arguments hold. Keep the weekly example,
+source URLs for every claim."</code></pre></details>
+<details><summary>Direction from me before Part 2 (Spanish, translated)</summary><pre class="wrap"><code>"Go with the SSN screen and the moment before it; the arguments hold. Keep the weekly example,
 anything else reads as misleading. Make the no-credit sentence true in both cases (soft identity
-check or not). Mention my fintech experience where it is relevant, never forced."</code></pre>
+check or not). Mention my fintech experience where it is relevant, never forced. Less text,
+more graphic: how we present it matters as much as what we present."</code></pre></details>
 
-<h3>What the tools got wrong, and how it was caught</h3>
-<div class="tbl"><table>
-<thead><tr><th>What happened</th><th>How it was caught</th><th>What changed</th></tr></thead>
-<tbody>
-<tr><td>Claude could not read the Apply Now artifact from the cloud session (network block on the artifact host).</td><td>The read call failed outright.</td><td>Opened the prototype in Chrome and captured all 12 screens by hand; slower, but every quote in Part 1 comes from a screen I looked at.</td></tr>
-<tr><td>The first script to read production styles from app.fundo.com was blocked by the browser tool's safety check (it read too much of the DOM on a financial site).</td><td>The tool refused to run it.</td><td>Narrowed it to headings, buttons and one input's border; no field values were ever read.</td></tr>
-<tr><td>The research agent could not see CSS through its fetcher, so it reported "hex colours not readable".</td><td>It said so in its report instead of guessing.</td><td>Colours came from computed styles in Chrome, in <code>lab()</code>, converted to hex with a short script; the FAQ font fallback was found this way.</td></tr>
-<tr><td>The first draft of the SSN screen said "We do not pull your credit score." Fundo's privacy policy says data may come from credit bureaus, so the line could be false if identity is verified through a bureau.</td><td>I asked what the line meant in practice and whether it held under a soft identity check.</td><td>Rewritten to "We check your identity, not your credit. This does not affect your score", which is true either way; the legal check in the first-week plan was rewritten to match.</td></tr>
-<tr><td>Part 3's first draft ended with an anecdote about a "payday effect" at PPI that did not happen.</td><td>A rule I keep for every document: no invented detail about my own work. I read every first-person line.</td><td>Removed. The sentence that stayed is the one I can defend.</td></tr>
-<tr><td>Sample size was stated as "roughly 3,900 per arm"; recomputed, it is about 4,000.</td><td>Recalculated in the shell.</td><td>Corrected in Part 3.</td></tr>
-<tr><td>The key-value rows in the cost card rendered with ragged labels.</td><td>Playwright render of the frames at 1200 px.</td><td>Fixed-width label column.</td></tr>
-<tr><td>Instagram, Facebook and LinkedIn could not be read at all.</td><td>All three fetches returned robots blocks; search returned other companies called Fundo.</td><td>Stated as an assumption in Part 1 (issue 14) rather than inferred.</td></tr>
-</tbody></table></div>
-
-<h3>Verification, in one paragraph</h3>
-<p>Every issue in Part 1 has a link or a screen number; every competitor claim has a source URL; every number in Part 3 was recomputed; every frame in Part 2 was rendered at 360 px and read back; the tokens in Part 4 came from computed styles, with the spacing marked as observed. What was not verified is also written down: the social profiles, the live screens after SSN (the prototype stops there, and the brief forbids applying), and the real pricing grid, for which third-party figures stand in and are labelled as such.</p>
+<h3>What went wrong, and how it was caught</h3>
+<div class="err">
+<div><b>Could not read the prototype artifact from the cloud session</b>Network block on the artifact host.<span>Opened it in Chrome and captured all 12 screens by hand. Every quote in Part 1 is from a screen I looked at.</span></div>
+<div><b>Style-reading script blocked on app.fundo.com</b>The browser tool's safety check refused a script that read too much of the DOM on a financial site.<span>Narrowed to headings, buttons and one input border. No field values were ever read.</span></div>
+<div><b>Research agent could not see CSS</b>Its fetcher strips stylesheets; it said so instead of guessing.<span>Colours came from computed styles in Chrome, in lab(), converted to hex. That is how the FAQ font fallback was found.</span></div>
+<div><b>"We do not pull your credit score"</b>First draft of the SSN screen. Fundo's privacy policy mentions credit bureaus, so the line could be false under a soft identity check.<span>I asked what it meant in practice. Rewritten to "We check your identity, not your credit. This does not affect your score", true either way.</span></div>
+<div><b>An invented anecdote</b>Part 3's first draft ended with a "payday effect" story at PPI that did not happen.<span>My rule: no invented detail about my own work, and I read every first-person line. Removed.</span></div>
+<div><b>Sample size off</b>"Roughly 3,900 per arm" in the first draft.<span>Recomputed in the shell: about 4,000. Corrected.</span></div>
+<div><b>Portal label claim wrong</b>The agent's HTML read said placeholder-only labels; the screenshot showed a visible label.<span>Removed from issue 6 when the evidence screenshots went in.</span></div>
+<div><b>Too much text, bad tables</b>First drafts were dense six-column tables and long paragraphs.<span>My call: cards, bars, screenshots and shorter copy, section by section.</span></div>
+<div><b>Copy that legal would strike</b>A cold review by a second Claude session with no context, prompted as Fundo's panel, found "Nothing is submitted until you accept an offer" (false: the SSN is submitted on that screen), a 30-day deletion promise, "read-only" on Plaid and a returning-customer screen that showed application status before the code was verified.<span>All rewritten. The same review caught that my primary metric was biased against my own design (ineligible applicants leave before the SSN in the treatment arm) and that the state check was behind the same flag. Both fixed in Parts 2 and 3.</span></div>
+</div>
+<p class="muted">Not verified, and said so: the social profiles, the screens after the SSN, the real pricing grid (third-party figures stand in, labelled as such).</p>
 <!-- SOURCES -->
 <h2 id="sources">Sources and assumptions</h2>
 <h3>Assumptions, stated</h3>
-<ul>
+<ul class="tight" style="font-size:14px">
 <li><b>Cost figures.</b> No factor rate, fee or term is published on fundo.com. The cost example (1.7 factor over 10 weeks, $25 same-day fee) comes from Finder's review of Fundo; the $1,500 default fee from BBB complaints. They are placeholders for Fundo's real pricing grid and are labelled "example" on screen.</li>
 <li><b>Traffic.</b> 1,200 application starts a week and a 35% start-to-SSN baseline are assumptions for the sample-size arithmetic; Amplitude replaces both on day one.</li>
 <li><b>Screen timings</b> in Part 1 are expert estimates, not measurements.</li>
+<li><b>Email.</b> No customer email could be observed without applying, which the brief forbids; the SendGrid templates in Part 4 are proposals.</li>
 <li><b>Social channels.</b> Instagram, Facebook and LinkedIn block automated readers; findings are limited to the links and parameters the site exposes and to search visibility.</li>
 <li><b>Live application.</b> Only the first screen of app.fundo.com/apply-now was inspected, read-only. Nothing was typed or submitted. Later screens come from the prototype, which stops at the SSN and omits the gig-worker and employee branches, errors and pop-ups.</li>
+<li><b>Copy claims in the mockups.</b> Plaid is named on fundo.com ("Plaid bank verification"); the early-payoff discount comes from the FAQ ("significant discounts" for early payoff); fee names come from Finder and BBB complaints. Hours for the phone line, the "apply again in 3 months" advice and the data-removal link are proposals for Fundo to confirm, not facts.</li>
 <li><b>Identity verification method.</b> Unknown whether Fundo verifies identity through a credit bureau; the copy was written to be true in both cases.</li>
 <li><b>Regulatory lines.</b> The "regulated financial service provider" claim on screen 12 and the "not a loan" framing are flagged for legal review; this document does not give legal advice.</li>
 <li><b>Spacing tokens</b> are observed from rendered layouts (Tailwind's 4 px scale), not read from source.</li>
 </ul>
 <h3>Sources</h3>
-<ul>
+<details><summary>All sources (brief, Fundo surfaces, reputation, competitors, regulation)</summary>
+<ul class="tight" style="font-size:13.5px;margin-top:8px">
 <li>Brief: <a href="https://fundo-llc.github.io/fundo-take-home/ui-ux-lead-challenge/">fundo-llc.github.io/fundo-take-home/ui-ux-lead-challenge</a> · Prototype: <a href="https://claude.ai/artifact/KdUR9FzJjbYQ2GZfKCENzJ">Fundo Apply Now, current flow</a></li>
 <li>Fundo surfaces: <a href="https://fundo.com">fundo.com</a>, <a href="https://fundo.com/faqs/">FAQs</a>, <a href="https://fundo.com/how-it-works/">How it Works</a>, <a href="https://fundo.com/why-fundo/">Why Fundo</a>, <a href="https://fundo.com/reviews/">Reviews</a>, <a href="https://fundo.com/apply-now/">Apply Now interstitial</a>, <a href="https://fundo.com/non-eligible-banks">Non-eligible banks</a>, <a href="https://fundo.com/blog/">Blog</a>, <a href="https://fundo.com/airbnb-occupancy-rate-cash-flow/">Airbnb occupancy post (Oct 30, 2026)</a>, <a href="https://fundo.com/fundo-bank-account-underwriting/">Underwriting post</a>, <a href="https://fundo.com/terms-of-service/">Terms</a>, <a href="https://fundo.com/privacy-policy/">Privacy</a>, <a href="https://portal.fundo.com/login">Portal login</a>, <a href="https://app.fundo.com/apply-now">app.fundo.com/apply-now</a> (first screen, read-only)</li>
 <li>Reputation: <a href="https://www.trustpilot.com/review/fundo.com">Trustpilot</a>, <a href="https://www.bbb.org/us/fl/north-miami-beach/profile/financial-services/fundo-0633-90575447">BBB profile</a> and <a href="https://www.bbb.org/us/fl/north-miami-beach/profile/financial-services/fundo-0633-90575447/complaints">complaints</a>, <a href="https://finder.com/business-loans/fundo-review">Finder review</a></li>
 <li>Competitors: <a href="https://gigglefinance.com">Giggle Finance</a> and <a href="https://gigglefinance.com/faq">FAQ</a>, <a href="https://finder.com/business-loans/giggle-finance-review">Finder</a>, <a href="https://www.nav.com/blog/giggle-finance-review/">Nav</a>, <a href="https://ca.trustpilot.com/review/gigglefinance.com">Trustpilot</a>; <a href="https://www.dave.com">Dave</a>, <a href="https://support.dave.com/hc/en-us/articles/115001437772">Dave on SSN</a>, <a href="https://support.dave.com/hc/en-us/articles/34766072608013-What-are-ExtraCash-Fees">ExtraCash fees</a>, <a href="https://www.nerdwallet.com/personal-loans/reviews/dave-cash-advance">NerdWallet (Apr 2026)</a>; <a href="https://www.hellobrigit.com">Brigit</a>, <a href="https://hellobrigit.com/learn/brigit-instant-cash-how-it-works">how it works</a>, <a href="https://www.nerdwallet.com/reviews/loans/personal-loans/brigit-app">NerdWallet (May 2026)</a>, <a href="https://www.trustpilot.com/review/hellobrigit.com">Trustpilot</a>; <a href="https://www.bluevine.com/line-of-credit">Bluevine</a>, <a href="https://www.finder.com/business-loans/bluevine-line-of-credit-review">Finder (Oct 2026)</a>, <a href="https://www.trustpilot.com/review/bluevine.com">Trustpilot</a>; <a href="https://movesfinancial.com">Moves Financial</a> (one-sentence total payback example)</li>
 <li>Regulation and enforcement: <a href="https://www.venable.com/insights/publications/2026/03/state-commercial-financing-disclosure-laws">Venable, state commercial financing disclosure laws (Mar 2026)</a>, <a href="https://www.alstonconsumerfinance.com/commercial-financing-disclosure-requirements-exemptions/">Alston &amp; Bird summary</a>, <a href="https://www.jdsupra.com/legalnews/cfpb-finalizes-revised-section-1071-1452111/">CFPB section 1071 revised rule (May 2026)</a>, <a href="https://search.ftc.gov/legal-library/browse/cases-proceedings/192-3252-rcg-advances-llc">FTC v. RCG Advances</a>, <a href="https://www.bankingdive.com/news/fintech-dave-alters-fee-structure-blasts-doj-over-amended-lawsuit-jason-wilk/736830/">FTC/DOJ v. Dave</a>, <a href="https://www.goodwinlaw.com/en/insights/blogs/2025/03/ftc-settles-with-cash-advance-company-to-the-tune-of-$17-million">FTC v. Cleo</a>, <a href="https://oag.dc.gov/release/attorney-general-schwalb-sues-pay-advance-company">DC AG v. EarnIn</a>, <a href="https://infobytes.orrick.com/2025-04-18/new-york-attorney-general-files-two-complaints-against-wage-access-providers/">NY AG v. DailyPay and MoneyLion</a></li>
 <li>Standards: WCAG 2.2 AA; W3C Design Tokens Community Group format.</li>
-</ul>
+</ul></details>
 <p class="muted">Diego Munar · <a href="https://diegomunar.com">diegomunar.com</a> · The redesigned screens are also available as an editable Claude Design project and the files as a GitHub repository (links in the summary).</p>
 
 </div>
